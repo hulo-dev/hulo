@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+$color-background:#202020;
+$color-border-btn:#FFFFFF;
+$color-border-btn-hover:#FFFFFF;
+$border-block:rgba(255, 255, 255, 0.2);
+$color-text:#FFFFFF;
+$color-logo:#FFFFFF;
+/*$color-background-card:*/
+$color-bg-item-hover:#FFFFFF;
+$color-bg-btn-hover:#FFFFFF;
+/************font-size**********************/
+$font-size-extra-large:111px;
+$font-size-large:60px;
+$font-size-less-large:48px;
+
+$font-size-exta-medium:34px;
+$font-size-medium:24px;
+$font-size-less-medium:20px;
+
+$font-size-extra-small:16px;
+$font-size-small:14px;
+$font-size-less-small:12px;
+
+%normal-300{
+    font-style: normal;
+    font-weight: 300;
+}
+%normal-400{
+    font-style: normal;
+    font-weight: 400;
+}
+%italic-400{
+    font-style: italic;
+    font-weight: 400;
+}
+
+body{
+    background: $color-background;
+    font-family: 'Work Sans';
+    
+}
+
+.btn {
+    span{
+
+    }
+}
+.name{
+
+}
+.section-title{
+    
+}
+.card-title{
+
+}
+.card-extra-title{
+
+}

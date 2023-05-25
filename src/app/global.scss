@@ -18,15 +18,15 @@ $color-logo:#FFFFFF;
 $color-bg-item-hover:#FFFFFF;
 $color-bg-btn-hover:#FFFFFF;
 /************font-size**********************/
-$font-size-extra-large:111px;
-$font-size-large:60px;
-$font-size-less-large:48px;
+$font-size-extra-large:clamp(33px,5.781vw,111px);
+$font-size-large:clamp(42px,3.125vw,60px);
+$font-size-less-large:clamp(33px,2.500vw,48px);
 
-$font-size-exta-medium:34px;
-$font-size-medium:24px;
-$font-size-less-medium:20px;
+$font-size-exta-medium:clamp(23px,1.771vw,34px);
+$font-size-medium:clamp(16px,1.250vw,24px);
+$font-size-less-medium:clamp(14px,1.042vw,20px);
 
-$font-size-extra-small:16px;
+$font-size-extra-small:clamp(14px,0.833vw,16px);
 $font-size-small:14px;
 $font-size-less-small:12px;
 
@@ -48,12 +48,24 @@ body{
     font-family: 'Work Sans';
     
 }
+.container{
+    max-width:1920px;
+    padding:0 clamp(20px,3.333vw,64px);
+    margin:0 auto;
+}
 
 .btn {
     span{
+        svg{
+            path{
 
+            }
+        }
     }
 }
+
+
+
 .name{
 
 }

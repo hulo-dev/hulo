@@ -1,18 +1,18 @@
 import Link from "next/link";
+import { DiagonalArrow } from "./Icons";
 
 
-const Button = ({link, name}) => {
+export const Button = ({link, name}) => {
 
     return (
-        <Link href={link}>
+        <Link className="btn" href={link}>
             {name}
             <span>
-                svg
-                svg
+                <DiagonalArrow/>
+                <DiagonalArrow/>
             </span>
         </Link>
     )
     
 }
 
-export default Button;

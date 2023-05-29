@@ -1,61 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-
-
-$color-background:#202020;
-$color-border-btn:#FFFFFF;
-$color-border-btn-hover:#FFFFFF;
-$border-block:rgba(255, 255, 255, 0.2);
-$border-color:#FFFFFF;
-$color-text:#FFFFFF;
-$color-logo:#FFFFFF;
+$color-background: #202020;
+$color-border-btn: #ffffff;
+$color-border-btn-hover: #ffffff;
+$border-block: rgba(255, 255, 255, 0.2);
+$border-color: #ffffff;
+$color-text: #ffffff;
+$color-logo: #ffffff;
 /*$color-background-card:*/
-$color-bg-item-hover:#FFFFFF;
-$color-bg-btn-hover:#FFFFFF;
-$color-text-btn-hover:#202020;
-$color-btn-svg-stroke-hover:#202020;
+$color-bg-item-hover: #ffffff;
+$color-bg-btn-hover: #ffffff;
+$color-text-btn-hover: #202020;
+$color-btn-svg-stroke-hover: #202020;
+
 /************font-size**********************/
-$font-size-extra-large:clamp(33px,5.781vw,111px);
-$font-size-large:clamp(18px,3.125vw,60px);
-$font-size-less-large:clamp(14px,2.500vw,48px);
+$font-size-extra-large: clamp(33px, 5.681vw, 111px);
+$font-size-large: clamp(18px, 3.125vw, 60px);
+$font-size-less-large: clamp(14px, 2.5vw, 48px);
 
-$font-size-exta-medium:clamp(10px,1.771vw,34px);
-$font-size-medium:clamp(7px,1.250vw,24px);
-$font-size-less-medium:clamp(6px,1.042vw,20px);
+$font-size-exta-medium: clamp(10px, 1.771vw, 34px);
+$font-size-medium: clamp(7px, 1.25vw, 24px);
+$font-size-less-medium: clamp(6px, 1.042vw, 20px);
 
-$font-size-extra-small:clamp(14px,0.833vw,16px);
-$font-size-small:14px;
-$font-size-less-small:12px;
+$font-size-extra-small: clamp(14px, 0.833vw, 16px);
+$font-size-small: 14px;
+$font-size-less-small: 12px;
 
-%normal-300{
+%normal-300 {
     font-style: normal;
     font-weight: 300;
 }
-%normal-400{
+%normal-400 {
     font-style: normal;
     font-weight: 400;
 }
-%italic-400{
-    font-style: italic;
-    font-weight: 400;
+%italic-400 {
+    font-style: italic !important;
+    font-weight: 400 !important;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
-body{
+body {
     background: $color-background;
-    font-family: 'Work Sans';
-    
+    font-family: "Work Sans";
 }
-.container{
-    max-width:1920px;
-    padding:0 clamp(20px,3.333vw,64px);
-    margin:0 auto;
+
+.container {
+    max-width: 1920px;
+    padding: 0 clamp(20px, 3.333vw, 64px);
+    margin: 0 auto;
+}
+
+.section__wrap {
+    padding: 50px 0;
 }
 
 .btn {
@@ -69,38 +71,37 @@ body{
     padding: 0 24px 0 24px;
     @extend %normal-400;
     font-size: $font-size-medium;
-    color:$color-text;
+    color: $color-text;
     text-decoration: none;
 
-    span{
+    span {
         position: relative;
         overflow: hidden;
         margin-left: 16px;
         min-width: 16px;
         min-height: 16px;
         max-height: 16px;
-        svg{
+        svg {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             display: block;
         }
-        svg:last-child{
-            
+        svg:last-child {
             top: 15px;
             left: -15px;
         }
-       
     }
-    &:hover{
-        background:$color-bg-btn-hover ;
-        color:$color-text-btn-hover;
-        svg:first-child{
+    &:hover {
+        background: $color-bg-btn-hover;
+        color: $color-text-btn-hover;
+
+        svg:first-child {
             top: -4px;
             left: 4px;
         }
-        svg:last-child{
+        svg:last-child {
             top: 0%;
             left: 0%;
             transition: all 0.5s ease-out;
@@ -108,30 +109,27 @@ body{
     }
 }
 
-
-
-.name{
+.name {
     @extend %normal-400;
     font-size: $font-size-extra-small;
-    color:$color-text;
+    color: $color-text;
 }
-.section-title{
-    h2{
+.section-title {
+    h2 {
         @extend %italic-400;
         font-size: $font-size-large;
         line-height: 120%;
-       
-
         letter-spacing: -0.5px;
-
-        
-
-        color: #FFFFFF;
+        color: #ffffff;
     }
 }
-.card-title{
 
+.card-title {
 }
-.card-extra-title{
 
+.card-extra-title {
+}
+
+.italic {
+    @extend %italic-400;
 }

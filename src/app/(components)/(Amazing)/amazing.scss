@@ -1,0 +1,161 @@
+@import "../../global.scss";
+.amazing__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .amazing__content-button {
+        order: 1;
+    }
+
+    .t1 {
+        order: 2;
+    }
+
+    .t2 {
+        order: 4;
+    }
+
+    .amazing__content-title {
+        font-weight: 300;
+        line-height: 120%;
+        letter-spacing: -0.078vw;
+        color: $color-text;
+        font-size: $font-size-extra-large;
+    }
+
+    .amazing__content-subtitle {
+        order: 3;
+        width: clamp(calc(555px * 0.3), 28.906vw, 555px);
+
+        p {
+            color: $color-text;
+            font-size: clamp(16px, 1.15vw, 23px);
+            line-height: 140%;
+        }
+    }
+}
+
+// ---START--- Pattners Block
+.amazing__img__block {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(34% - 30px);
+    margin: 0 15px;
+    z-index: 1;
+    right: 0;
+    bottom: clamp(10px, 1.667vw, 32px);
+}
+
+.amazing__img__block img {
+    max-height: clamp(calc(28px * 0.3), 1.458vw, 28px);
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project {
+    color: $color-text;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+// ---END--- Pattners Block
+
+// --START-- SLIDER
+.slide-m {
+    display: none;
+}
+.amazing__slider-container {
+    position: relative;
+    max-height: clamp(calc(537px * 0.3), 27.969vw, 537px);
+    max-height: clamp(-moz-calc(537px * 0.3), 27.969vw, 537px);
+    max-height: clamp(-webkit-calc(537px * 0.3), 27.969vw, 537px);
+    height: 100%;
+    clip-path: url(#sliderSvg);
+    // clip-path: path(
+    //     "M0 0 L 1000 0 L 1000 240 Q 1000 250 990 250 L 660 250 Q 650 250 650 260 L 650 290 Q 650 300 640 300 L 0 300 Z"
+    // );
+}
+
+.amazing__slider-container .swiper-slide {
+    min-height: 100%;
+}
+.amazing__slider-container .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    height: clamp(calc(537px * 0.3), 27.969vw, 537px);
+    height: clamp(-moz-calc(537px * 0.3), 27.969vw, 537px);
+    height: clamp(-webkit-calc(537px * 0.3), 27.969vw, 537px);
+    min-height: 100%;
+    object-fit: contain;
+}
+// --END-- SLIDER
+
+@media (max-width: 767px) {
+    .slide-desc {
+        display: none;
+    }
+
+    // --START-- Tile
+    .amazing__content {
+        display: block;
+
+        .amazing__content-title {
+            display: inline;
+        }
+        .amazing__content-subtitle {
+            position: initial !important;
+            width: 100% !important;
+        }
+        .t1 {
+            float: left;
+        }
+    }
+
+    // --END-- Tile
+
+    .slide-m {
+        display: block;
+        object-fit: none !important;
+        width: 100%;
+    }
+    .amazing__img__block {
+        position: static;
+        margin: 32px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .amazing__img__block img {
+        max-height: 16px;
+        width: auto;
+        height: 100%;
+        max-height: 16px;
+    }
+
+    // --START-- SLIDER
+    .amazing__slider-container {
+        position: relative;
+        max-height: 192px;
+        height: 100%;
+    }
+    .amazing__slider-container .swiper-slide {
+        width: 100%;
+    }
+    .amazing__slider-container .swiper-slide {
+        min-height: 100%;
+    }
+    .amazing__slider-container .swiper-slide img {
+        height: 192px;
+        object-fit: cover !important;
+        border-radius: 8px;
+    }
+    // --END-- SLIDER
+}

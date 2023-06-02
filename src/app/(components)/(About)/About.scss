@@ -1,11 +1,15 @@
-@import '../../global.scss';
+@import '../../VARS.scss';
 
 
 .about{
+    margin-bottom:160px;
     &__wrap{
         display:flex;
         justify-content: space-between;
         flex-wrap:wrap;
+    }
+    .section__wrap{
+        padding:0px;
     }
     &__name{
         width:clamp(166px,28.906vw,555px);
@@ -44,13 +48,25 @@
     }
 }
 
-@media (max-width:768px){
+@media (max-width:767px){
     .about{
-       
+        margin-bottom:88px;
         &__name{
             width:100%;
-            margin-bottom:20px;
+            margin-bottom:16px;
+            .name{
+                font-size: 16px;
+                padding:0px 0 16px 0;
+            }
            
+        }
+        &__title{
+            margin-bottom:16px;
+            h3{
+               
+                font-size:28px;
+                
+            }
         }
         &__content{
             max-width:100%;
@@ -58,6 +74,9 @@
        
         &__subtitle{
             max-width:100%;
+            p{
+                font-size: 16px; 
+            }
         }
     }
 

@@ -41,7 +41,7 @@ const FEATURED_ELEMENTS = [
 
 const Featured = () => {
     return (
-        <section className="section featured">
+        <section id='featured' className="section featured">
             <div className="container">
                 <div className="wrap">
                     <FeaturedTitle/>

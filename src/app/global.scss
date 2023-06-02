@@ -1,59 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import 'VARS.scss';
 
-$color-background: #202020;
-$color-border-btn: #ffffff;
-$color-border-btn-hover: #ffffff;
-$border-block: rgba(255, 255, 255, 0.2);
-$border-color: #ffffff;
-$color-text: #ffffff;
-$color-logo: #ffffff;
-/*$color-background-card:*/
-$color-bg-item-hover: #ffffff;
-$color-bg-btn-hover: #ffffff;
-$color-text-btn-hover: #202020;
-$color-btn-svg-stroke-hover: #202020;
 
-/************font-size**********************/
-$font-size-extra-large: clamp(33px, 5.681vw, 111px);
-$font-size-large: clamp(18px, 3.125vw, 60px);
-$font-size-less-large: clamp(14px, 2.5vw, 48px);
-
-$font-size-exta-medium: clamp(10px, 1.771vw, 34px);
-$font-size-medium: clamp(7px, 1.25vw, 24px);
-$font-size-less-medium: clamp(6px, 1.042vw, 20px);
-
-$font-size-extra-small: clamp(14px, 0.833vw, 16px);
-$font-size-small: 14px;
-$font-size-less-small: 12px;
-
-%normal-300 {
-    font-style: normal;
-    font-weight: 300;
-}
-%normal-400 {
-    font-style: normal;
-    font-weight: 400;
-}
-%italic-400 {
-    font-style: italic !important;
-    font-weight: 400 !important;
+html{
+    scroll-behavior: smooth;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
 body {
     background: $color-background;
     font-family: "Work Sans";
 }
-
+.lock{
+    overflow: hidden;
+}
 .container {
     max-width: 1920px;
-    padding: 0 clamp(20px, 3.333vw, 64px);
+    padding: 0 clamp(16px, 3.333vw, 64px);
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .section__wrap {
@@ -106,6 +77,12 @@ body {
             left: 0%;
             transition: all 0.5s ease-out;
         }
+        svg{
+            path{
+                fill: $color-btn-svg-stroke-hover;
+                stroke: $color-btn-svg-stroke-hover;
+            }
+        }
     }
 }
 
@@ -133,3 +110,5 @@ body {
 .italic {
     @extend %italic-400;
 }
+
+

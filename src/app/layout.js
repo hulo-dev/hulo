@@ -1,3 +1,6 @@
+'use client'
+import { useState } from 'react';
+import Header from './(components)/Header/Header'
 import './global.scss'
 
 
@@ -7,9 +10,19 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  
+  const [isLock, setIsLock] = useState(false);
+
+  const lockHandler = (lock) => {
+      setIsLock(lock);
+  }
+
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
+      <body className={isLock ? 'lock' : ''}>
+        <Header lock={lockHandler} setIsLock={setIsLock}/>
+        {children}
+      </body>
     </html>
   )
 }

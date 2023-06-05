@@ -1,4 +1,4 @@
-@import '../../VARS.scss';
+@import "../../VARS.scss";
 
 .amazing__content {
     display: flex;
@@ -70,16 +70,15 @@
 .slide-m {
     display: none;
 }
+.swiper {
+    clip-path: url(#sliderSvg);
+}
 .amazing__slider-container {
     position: relative;
     max-height: clamp(calc(537px * 0.3), 27.969vw, 537px);
     max-height: clamp(-moz-calc(537px * 0.3), 27.969vw, 537px);
     max-height: clamp(-webkit-calc(537px * 0.3), 27.969vw, 537px);
     height: 100%;
-    clip-path: url(#sliderSvg);
-    // clip-path: path(
-    //     "M0 0 L 1000 0 L 1000 240 Q 1000 250 990 250 L 660 250 Q 650 250 650 260 L 650 290 Q 650 300 640 300 L 0 300 Z"
-    // );
 }
 
 .amazing__slider-container .swiper-slide {
@@ -101,6 +100,12 @@
     .slide-desc {
         display: none;
     }
+    .swiper {
+        clip-path: none;
+    }
+    .path-svg {
+        display: none;
+    }
 
     // --START-- Tile
     .amazing__content {
@@ -112,9 +117,13 @@
         .amazing__content-subtitle {
             position: initial !important;
             width: 100% !important;
+            margin-top: 16px;
         }
         .t1 {
             float: left;
+        }
+        .amazing__content-button {
+            margin: 32px auto;
         }
     }
 

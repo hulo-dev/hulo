@@ -1,0 +1,89 @@
+@import "../../VARS.scss";
+
+.services {
+    margin-top: 84px;
+}
+
+.services {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    .services__text_wraper {
+        background-color: $color-background-paper;
+        padding: 32px;
+        border-radius: 24px;
+        flex-basis: 66%;
+        // max-width: 1173px;
+        flex-grow: 1;
+    }
+
+    .services__text {
+        margin-top: 27px;
+        font-size: $font-size-large;
+        color: $color-text;
+        line-height: 120%;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+    }
+}
+
+.card {
+    background-color: $color-background-paper;
+    border-radius: 24px;
+    // flex-basis: calc(33% - 19px);
+    flex-basis: 30%;
+    min-width: 342px;
+    padding: 32px;
+    overflow: hidden;
+    flex-grow: 1;
+
+    &__title {
+        font-size: $font-size-exta-medium;
+        color: $color-text;
+    }
+    &__text {
+        font-size: $font-size-extra-small;
+        color: $color-text;
+        font-family: Work Sans;
+
+        font-weight: 300;
+        line-height: 22px;
+        letter-spacing: 0.4px;
+    }
+    &__portfolio {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__dody {
+        margin-top: 100px;
+    }
+    &__portfolio_img {
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+.card--active {
+    border: 1px solid $border-color;
+}
+
+.sup {
+    &__text {
+        font-size: $font-size-medium;
+        color: $color-text;
+    }
+    &__sup {
+        font-size: $font-size-extra-small;
+        color: $color-text;
+    }
+}
+
+.border {
+    margin: 23px 0;
+    background-color: $color-text;
+    display: block;
+    height: 1px;
+    width: 100%;
+}

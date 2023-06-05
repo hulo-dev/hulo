@@ -1,46 +1,52 @@
 import NavbarItem from "./NavbarItem";
-import './Navbar.scss';
+import "./Navbar.scss";
 import Partners from "../Partners";
 import Social from "../Social";
 import Mail from "./Mail";
+
 const NAVIGATION__LINKS = [
     {
-        href:"/",
-        name:"about"
+        href: "/",
+        name: "about",
     },
     {
-        href:"/#featured",
-        name:"services"
+        href: "/#featured",
+        name: "services",
     },
     {
-        href:"/",
-        name:"works"
+        href: "/",
+        name: "works",
     },
     {
-        href:"/Contact",
-        name:"Contact US"
-    }
-    
+        href: "/Contact",
+        name: "Contact US",
+    },
 ];
-
 
 //"nav-list"
 
 const Navbar = ({ isOpen, isClose, setIsOpen, lock }) => {
-    
     return (
-        <nav className={ isOpen ? 'nav active' : 'nav'}>
-            <ul className='nav-list'>
-               { NAVIGATION__LINKS.map( (link, index) => (<NavbarItem key={index+'-item'} link={link.href} name={link.name} handlerClose={isClose} setIsOpen={setIsOpen} lock={lock}/>))}
+        <nav className={isOpen ? "nav active" : "nav"}>
+            <ul className="nav-list">
+                {NAVIGATION__LINKS.map((link, index) => (
+                    <NavbarItem
+                        key={index + "-item"}
+                        link={link.href}
+                        name={link.name}
+                        handlerClose={isClose}
+                        setIsOpen={setIsOpen}
+                        lock={lock}
+                    />
+                ))}
             </ul>
             <div className="header-contant">
                 <Mail />
-                <Social class_name="header-social"/>
-                <Partners class_name="partners-header"/>
+                <Social class_name="header-social" />
+                <Partners class_name="partners-header" />
             </div>
-            
         </nav>
     );
-}
+};
 
 export default Navbar;

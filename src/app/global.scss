@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import 'VARS.scss';
+@import "VARS.scss";
 
-
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -10,14 +9,13 @@ html{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
 }
 
 body {
     background: $color-background;
     font-family: "Work Sans";
 }
-.lock{
+.lock {
     overflow: hidden;
 }
 .container {
@@ -35,7 +33,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: clamp(20px,3.021vw,58px);
+    height: clamp(20px, 3.021vw, 58px);
     border: 1px solid $color-border-btn;
     background: transparent;
     border-radius: 112px;
@@ -48,28 +46,28 @@ body {
     span {
         position: relative;
         overflow: hidden;
-        margin-left: clamp(5px,0.833vw,16px);
-        min-width: clamp(5px,0.833vw,16px);
-        min-height: clamp(5px,0.833vw,16px);
-        max-height: clamp(5px,0.833vw,16px);
+        margin-left: clamp(5px, 0.833vw, 16px);
+        min-width: clamp(5px, 0.833vw, 16px);
+        min-height: clamp(5px, 0.833vw, 16px);
+        max-height: clamp(5px, 0.833vw, 16px);
         svg {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             display: block;
-            width:clamp(5px,0.833vw,16px);
-            height: clamp(5px,0.833vw,16px);
+            width: clamp(5px, 0.833vw, 16px);
+            height: clamp(5px, 0.833vw, 16px);
         }
         svg:last-child {
             top: 15px;
             left: -15px;
         }
     }
-    &:hover {
+    &:not(.text):hover {
         background: $color-bg-btn-hover;
         color: $color-text-btn-hover;
-        span{
+        span {
             svg:first-child {
                 top: -4px;
                 left: 4px;
@@ -79,32 +77,29 @@ body {
                 left: 0%;
                 transition: all 0.5s ease-out;
             }
-            svg{
-                path{
+            svg {
+                path {
                     fill: $color-btn-svg-stroke-hover;
                     stroke: $color-btn-svg-stroke-hover;
                 }
             }
         }
-       
     }
 }
 
-@media(max-width:767px){
+@media (max-width: 767px) {
     .btn {
         height: 48px;
         padding: 0 16px 0 16px;
         font-size: 24px;
-        
-    
+
         span {
             margin-left: 16px;
             min-width: 15px;
             min-height: 15px;
             max-height: 15px;
             svg {
-        
-                width:15px;
+                width: 15px;
                 height: 15px;
             }
             svg:last-child {
@@ -115,7 +110,22 @@ body {
     }
 }
 
+.btn.text {
+    border: none;
+    padding: 0;
 
+    &:hover {
+        svg:first-child {
+            top: -4px;
+            left: 4px;
+        }
+        svg:last-child {
+            top: 0%;
+            left: 0%;
+            transition: all 0.5s ease-out;
+        }
+    }
+}
 
 .name {
     @extend %normal-400;
@@ -141,5 +151,3 @@ body {
 .italic {
     @extend %italic-400;
 }
-
-

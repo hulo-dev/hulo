@@ -35,7 +35,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 58px;
+    height: clamp(20px,3.021vw,58px);
     border: 1px solid $color-border-btn;
     background: transparent;
     border-radius: 112px;
@@ -48,16 +48,18 @@ body {
     span {
         position: relative;
         overflow: hidden;
-        margin-left: 16px;
-        min-width: 16px;
-        min-height: 16px;
-        max-height: 16px;
+        margin-left: clamp(5px,0.833vw,16px);
+        min-width: clamp(5px,0.833vw,16px);
+        min-height: clamp(5px,0.833vw,16px);
+        max-height: clamp(5px,0.833vw,16px);
         svg {
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             display: block;
+            width:clamp(5px,0.833vw,16px);
+            height: clamp(5px,0.833vw,16px);
         }
         svg:last-child {
             top: 15px;
@@ -67,24 +69,53 @@ body {
     &:hover {
         background: $color-bg-btn-hover;
         color: $color-text-btn-hover;
+        span{
+            svg:first-child {
+                top: -4px;
+                left: 4px;
+            }
+            svg:last-child {
+                top: 0%;
+                left: 0%;
+                transition: all 0.5s ease-out;
+            }
+            svg{
+                path{
+                    fill: $color-btn-svg-stroke-hover;
+                    stroke: $color-btn-svg-stroke-hover;
+                }
+            }
+        }
+       
+    }
+}
 
-        svg:first-child {
-            top: -4px;
-            left: 4px;
-        }
-        svg:last-child {
-            top: 0%;
-            left: 0%;
-            transition: all 0.5s ease-out;
-        }
-        svg{
-            path{
-                fill: $color-btn-svg-stroke-hover;
-                stroke: $color-btn-svg-stroke-hover;
+@media(max-width:767px){
+    .btn {
+        height: 48px;
+        padding: 0 16px 0 16px;
+        font-size: 24px;
+        
+    
+        span {
+            margin-left: 16px;
+            min-width: 15px;
+            min-height: 15px;
+            max-height: 15px;
+            svg {
+        
+                width:15px;
+                height: 15px;
+            }
+            svg:last-child {
+                top: 15px;
+                left: -15px;
             }
         }
     }
 }
+
+
 
 .name {
     @extend %normal-400;

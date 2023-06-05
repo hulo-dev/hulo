@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import Footer from './(components)/(Footer)/Footer';
 import Header from './(components)/Header/Header'
 import './global.scss'
 
@@ -21,7 +22,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
       <body className={isLock ? 'lock' : ''}>
         <Header lock={lockHandler} setIsLock={setIsLock}/>
-        {children}
+          {children}
+          
+        <Footer copy={true} partners={true} btn={false}/>
       </body>
     </html>
   )

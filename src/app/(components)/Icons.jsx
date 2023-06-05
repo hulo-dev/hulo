@@ -174,3 +174,40 @@ export const WorkArrowRight = () => {
 
     );
 }
+
+
+export const PrevArrow = () => {
+    return (
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33 33H17M17 33V17M17 33L33 17" stroke="white" strokeWidth="2"/>
+            <rect x="1" y="1" width="48" height="48" rx="12" stroke="white" strokeOpacity="0.2"/>
+        </svg>
+    );
+}
+export const NextArrow = () => {
+    return (
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 17H33M33 17V33M33 17L17 33" stroke="white" strokeWidth="2"/>
+            <rect x="1" y="1" width="48" height="48" rx="12" stroke="white" strokeOpacity="0.2"/>
+        </svg>
+    );
+
+}
+
+
+export const FlagIcon = () => {
+    return(
+        <svg className="flag" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_4429_2409)">
+                <path d="M20.3077 1.25356V8.50102C18.6159 7.84833 16.9241 7.68568 15.2302 7.76803C13.5385 7.84833 11.8467 8.1757 10.1549 8.50102C8.46101 8.82633 6.76923 9.1537 5.07745 9.234C3.38567 9.31635 1.69178 9.1537 0 8.50102V1.25356C1.69178 1.90624 3.38567 2.0689 5.07745 1.9886C6.76923 1.90624 8.46101 1.58093 10.1549 1.25356C11.8467 0.928245 13.5385 0.602933 15.2302 0.520576C16.9241 0.438218 18.6159 0.602933 20.3077 1.25356Z" fill="#005EB8"/>
+                <path d="M20.3077 8.50124V15.7487C18.6159 15.096 16.9241 14.9334 15.2302 15.0137C13.5385 15.096 11.8467 15.4213 10.1549 15.7487C8.46101 16.074 6.76923 16.3993 5.07745 16.4817C3.38567 16.562 1.69178 16.3993 0 15.7487V8.50124C1.69178 9.15393 3.38567 9.31658 5.07745 9.23422C6.76923 9.15392 8.46101 8.82655 10.1549 8.50124C11.8467 8.17593 13.5385 7.84856 15.2302 7.76826C16.9241 7.6859 18.6159 7.84856 20.3077 8.50124Z" fill="#FFD101"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_4429_2409">
+                    <rect width="20.3077" height="16" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+    )
+}

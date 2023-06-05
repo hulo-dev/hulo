@@ -5,8 +5,6 @@ import "swiper/css";
 import Image from "next/image";
 
 const Slider = ({ data }) => {
-    console.log("data================data");
-    console.log(data);
     return (
         <Swiper
             modules={[Autoplay]}
@@ -17,7 +15,7 @@ const Slider = ({ data }) => {
                 disableOnInteraction: false,
             }}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
+            onSlideChange={() => {}}
             onSwiper={(swiper) => console.log(swiper)}
         >
             {data.map((e) => (

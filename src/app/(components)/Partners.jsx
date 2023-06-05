@@ -10,8 +10,8 @@ const Partners = ({ class_name }) => {
             >
                 <Image
                     className="img-dark"
-                    width={710}
-                    height={112}
+                    width={177}
+                    height={28}
                     src="shopify-partners-dark.png"
                     alt="#"
                 />
@@ -23,8 +23,8 @@ const Partners = ({ class_name }) => {
             >
                 <Image
                     className="img-dark"
-                    width={637}
-                    height={80}
+                    width={159}
+                    height={28}
                     src="circle-dark.png"
                     alt="#"
                 />
@@ -36,8 +36,8 @@ const Partners = ({ class_name }) => {
             >
                 <Image
                     className="/img-dark"
-                    width={436}
-                    height={112}
+                    width={109}
+                    height={28}
                     src="shopify-plus-dark.png"
                     alt="#"
                 />

@@ -4,6 +4,7 @@ import Featured from "./(components)/(Featured)/Featured";
 import Amazing from "./(components)/(Amazing)/Amazing";
 import Work from "./(components)/(Work)/Work";
 import OurPartners from "./(components)/(OurPartners)/OurPartners";
+import Feedback from "./(components)/Feedback/Feedback";
 
 export default function Home() {
     return (
@@ -13,7 +14,7 @@ export default function Home() {
             <Featured />
             <Work />
             <OurPartners />
-
+            <Feedback />
         </div>
     );
 }

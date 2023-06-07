@@ -1,5 +1,5 @@
 "use client";
-import { A11y, Autoplay, Pagination, Scrollbar } from "swiper";
+import { EffectFade, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
@@ -7,11 +7,13 @@ import Image from "next/image";
 const Slider = ({ data }) => {
     return (
         <Swiper
-            modules={[Autoplay]}
+            modules={[EffectFade, Autoplay]}
             loop={true}
             spaceBetween={50}
+            effect={"fade"}
+            speed={1000}
             autoplay={{
-                delay: 10000,
+                delay: 5000,
                 disableOnInteraction: false,
             }}
             slidesPerView={1}
@@ -25,13 +27,6 @@ const Slider = ({ data }) => {
                         width={1141}
                         height={347}
                         src={e.data.img.url}
-                        alt=""
-                    />
-                    <Image
-                        className="slide-m"
-                        width={1141}
-                        height={347}
-                        src={e.data.img_mobile.url}
                         alt=""
                     />
                     <div className="project">

@@ -56,7 +56,6 @@
     width: 100%;
     object-fit: contain;
     height: auto;
-   
 }
 
 .project {
@@ -64,21 +63,21 @@
     position: absolute;
     bottom: 24px;
     left: 24px;
-    &__subtitle{
-        margin-bottom:8px;
-        p{
+    &__subtitle {
+        margin-bottom: 8px;
+        p {
             font-size: $font-size-extra-small;
             line-height: 140%;
-            color:$color-text;
+            color: $color-text;
             letter-spacing: 0.15px;
             @extend %normal-400;
         }
     }
-    &__name{
-        h5{
+    &__name {
+        h5 {
             font-size: $font-size-extra-small;
             line-height: 140%;
-            color:$color-text;
+            color: $color-text;
             letter-spacing: 0;
             @extend %normal-300;
         }
@@ -87,24 +86,21 @@
 // ---END--- Pattners Block
 
 // --START-- SLIDER
-.slide-m {
-    display: none;
-}
 .swiper {
     clip-path: url(#sliderSvg);
 }
 .amazing__slider-container {
     position: relative;
-    margin-top:clamp(30px,3.906vw,75px);
+    margin-top: clamp(30px, 3.906vw, 75px);
     max-height: clamp(calc(537px * 0.3), 27.969vw, 537px);
     max-height: clamp(-moz-calc(537px * 0.3), 27.969vw, 537px);
     max-height: clamp(-webkit-calc(537px * 0.3), 27.969vw, 537px);
     height: 100%;
-    .img-dark{
-        margin-right:clamp(10px,3.125vw,60px);
+    .img-dark {
+        margin-right: clamp(10px, 3.125vw, 60px);
     }
-    .img-dark:last-child{
-        margin-right:0px;
+    .img-dark:last-child {
+        margin-right: 0px;
     }
 }
 
@@ -124,9 +120,6 @@
 // --END-- SLIDER
 
 @media (max-width: 767px) {
-    .slide-desc {
-        display: none;
-    }
     .swiper {
         clip-path: none;
     }
@@ -145,7 +138,7 @@
             position: initial !important;
             width: 100% !important;
             margin-top: 16px;
-            p{
+            p {
                 font-size: 16px;
             }
         }
@@ -160,18 +153,16 @@
     // --END-- Tile
 
     .project {
-       
         bottom: 8px;
         left: 8px;
-        &__subtitle{
-            margin-bottom:2px;
-            p{
-                font-size:12px;
-             
+        &__subtitle {
+            margin-bottom: 2px;
+            p {
+                font-size: 12px;
             }
         }
-        &__name{
-            h5{
+        &__name {
+            h5 {
                 font-size: 16px;
             }
         }
@@ -192,7 +183,6 @@
     }
 
     .amazing__img__block img {
-        
         width: 100%;
         height: auto;
         object-fit: contain;

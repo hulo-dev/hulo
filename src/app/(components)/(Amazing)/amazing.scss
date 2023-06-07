@@ -21,19 +21,20 @@
     .amazing__content-title {
         font-weight: 300;
         line-height: 120%;
-        letter-spacing: -0.078vw;
+        letter-spacing: -1.5px;
         color: $color-text;
         font-size: $font-size-extra-large;
     }
 
     .amazing__content-subtitle {
         order: 3;
-        width: clamp(calc(555px * 0.3), 28.906vw, 555px);
+        width: clamp(166px, 28.906vw, 555px);
 
         p {
             color: $color-text;
-            font-size: clamp(16px, 1.15vw, 23px);
+            font-size: clamp(12px, 1.15vw, 23px);
             line-height: 140%;
+            @extend %normal-300;
         }
     }
 }
@@ -48,21 +49,40 @@
     margin: 0 15px;
     z-index: 1;
     right: 0;
-    bottom: clamp(10px, 1.667vw, 32px);
+    bottom: clamp(0px, 0.885vw, 17px);
 }
 
 .amazing__img__block img {
-    max-height: clamp(calc(28px * 0.3), 1.458vw, 28px);
-    width: auto;
-    height: 100%;
+    width: 100%;
     object-fit: contain;
+    height: auto;
+   
 }
 
 .project {
     color: $color-text;
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    bottom: 24px;
+    left: 24px;
+    &__subtitle{
+        margin-bottom:8px;
+        p{
+            font-size: $font-size-extra-small;
+            line-height: 140%;
+            color:$color-text;
+            letter-spacing: 0.15px;
+            @extend %normal-400;
+        }
+    }
+    &__name{
+        h5{
+            font-size: $font-size-extra-small;
+            line-height: 140%;
+            color:$color-text;
+            letter-spacing: 0;
+            @extend %normal-300;
+        }
+    }
 }
 // ---END--- Pattners Block
 
@@ -75,10 +95,17 @@
 }
 .amazing__slider-container {
     position: relative;
+    margin-top:clamp(30px,3.906vw,75px);
     max-height: clamp(calc(537px * 0.3), 27.969vw, 537px);
     max-height: clamp(-moz-calc(537px * 0.3), 27.969vw, 537px);
     max-height: clamp(-webkit-calc(537px * 0.3), 27.969vw, 537px);
     height: 100%;
+    .img-dark{
+        margin-right:clamp(10px,3.125vw,60px);
+    }
+    .img-dark:last-child{
+        margin-right:0px;
+    }
 }
 
 .amazing__slider-container .swiper-slide {
@@ -118,6 +145,9 @@
             position: initial !important;
             width: 100% !important;
             margin-top: 16px;
+            p{
+                font-size: 16px;
+            }
         }
         .t1 {
             float: left;
@@ -128,6 +158,24 @@
     }
 
     // --END-- Tile
+
+    .project {
+       
+        bottom: 8px;
+        left: 8px;
+        &__subtitle{
+            margin-bottom:2px;
+            p{
+                font-size:12px;
+             
+            }
+        }
+        &__name{
+            h5{
+                font-size: 16px;
+            }
+        }
+    }
 
     .slide-m {
         display: block;
@@ -144,16 +192,16 @@
     }
 
     .amazing__img__block img {
-        max-height: 16px;
-        width: auto;
-        height: 100%;
-        max-height: 16px;
+        
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     // --START-- SLIDER
     .amazing__slider-container {
         position: relative;
-        max-height: 192px;
+        max-height: 1000px;
         height: 100%;
     }
     .amazing__slider-container .swiper-slide {

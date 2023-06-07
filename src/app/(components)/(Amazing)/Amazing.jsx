@@ -20,8 +20,8 @@ const Amazing = async () => {
                         <h2 className="amazing__content-title t1">
                             AMAZING CUSTOM&nbsp;
                         </h2>
-                        <h2 className="amazing__content-title italic t2">
-                            SQUARESPACE & SHOPIFY DESIGN
+                        <h2 className="amazing__content-title  t2">
+                            <span className="italic">SQUARESPACE & SHOPIFY</span> DESIGN
                         </h2>
                         <div className="amazing__content-subtitle">
                             <p>

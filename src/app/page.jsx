@@ -6,6 +6,8 @@ import Work from "./(components)/(Work)/Work";
 import OurPartners from "./(components)/(OurPartners)/OurPartners";
 import Service from "./(components)/(Service)/Service";
 import Feedback from "./(components)/Feedback/Feedback";
+import FooterSocial from "./(components)/(FooterSocial)/FooterSocial";
+import Creating from "./(components)/(Creating)/Creating";
 
 export default function Home() {
     return (
@@ -17,6 +19,8 @@ export default function Home() {
             <Service />
             <OurPartners />
             <Feedback />
+            <Creating />
+            <FooterSocial class_name="footer-social"/>
         </div>
     );
 }

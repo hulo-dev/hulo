@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import Footer from './(components)/(Footer)/Footer';
+import ChangeFooter from './(components)/ChangeFooter';
 import Header from './(components)/Header/Header'
 import './global.scss'
 
@@ -23,8 +24,7 @@ export default function RootLayout({ children }) {
       <body className={isLock ? 'lock' : ''}>
         <Header lock={lockHandler} setIsLock={setIsLock}/>
           {children}
-          
-        <Footer copy={true} partners={true} btn={false}/>
+        <ChangeFooter />
       </body>
     </html>
   )

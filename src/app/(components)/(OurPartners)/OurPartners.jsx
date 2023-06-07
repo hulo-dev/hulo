@@ -3,7 +3,7 @@ import './OurPartners.scss';
 
 const OurPartners = () => {
     return (
-        <div className="our-partners">
+        <div className="section our-partners">
             <div className="container">
                 <div className="our-partners__wrap">
                     <div className="our-partners-name">

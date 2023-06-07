@@ -4,7 +4,7 @@ import FeedbackSlider from './FeedbackSlider';
 
 const Feedback = () => {
     return(
-        <div className="feedback">
+        <div className="feedback section">
             <div className="container">
                 <div className="feedback__wrap">
                     <div className="feedback-title title">

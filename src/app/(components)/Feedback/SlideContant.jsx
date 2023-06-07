@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Quotes } from "../Icons";
 import './SlideContant.scss';
+
 const SlideContant = ({name, profession, src_img, description}) => {
+    
     return (
         <div className="slide__wrap">
             <div className="slide-description">

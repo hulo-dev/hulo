@@ -10,13 +10,20 @@
     flex-wrap: wrap;
     gap: 32px;
 
+    @media (max-width: 767px) {
+        gap: 16px;
+    }
+
     .services__text_wraper {
         background-color: $color-background-paper;
         padding: 32px;
         border-radius: 24px;
         flex-basis: calc(66% - 16px);
-        // max-width: 1173px;
         flex-grow: 1;
+
+        @media (max-width: 767px) {
+            border-radius: 8px;
+        }
     }
 
     .services__text {
@@ -38,6 +45,7 @@
     overflow: hidden;
     flex-grow: 1;
     cursor: pointer;
+    transition: all 0.5s;
 
     &:hover &__body_wrapper {
         top: 0;
@@ -52,6 +60,16 @@
 
     @media (max-width: 1100px) {
         flex-basis: calc(50% - 16px);
+    }
+
+    @media (max-width: 767px) {
+        max-height: 66px;
+        border-radius: 8px;
+
+        &:hover &__body_wrapper {
+            top: 20px;
+            transition: all 0.5s;
+        }
     }
 
     &__title {
@@ -74,7 +92,7 @@
     }
     &__body_wrapper {
         height: 100%;
-        top: 95px;
+        top: 100px;
         position: relative;
         transition: all 0.5s;
     }
@@ -85,7 +103,7 @@
         height: 100%;
     }
     .gfhf {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     &__portfolio_img {
         position: relative;
@@ -101,9 +119,24 @@
             right: 25px;
         }
     }
+
+    .icon_checked {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: inline-block;
+            position: absolute;
+            right: 32px;
+        }
+    }
 }
 .card--active {
     border: 1px solid $border-color;
+
+    @media (max-width: 767px) {
+        transition: all 0.5s;
+        max-height: 500px !important;
+    }
 }
 
 .sup {

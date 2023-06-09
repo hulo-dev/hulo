@@ -1,9 +1,21 @@
+"use client";
 import Image from "next/image";
 import { Button } from "../Button";
+import { Checked } from "../Icons";
+import { useState } from "react";
 
 const Card = ({ data }) => {
+    const [active, setActive] = useState(false);
+    const activeCard = () => {
+        let isActive = active ? false : true;
+        setActive(isActive);
+    };
     return (
-        <div className="card">
+        <div className={active ? "card card--active" : "card"}>
+            <span onClick={activeCard}>
+                <Checked />
+            </span>
+
             <p className="card__title">{data.title}</p>
             <div className="card__body_wrapper">
                 <div className="card__body">

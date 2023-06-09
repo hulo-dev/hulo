@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './PartnersItem.scss';
 
 const PartnersItem = ({index, item }) => {
@@ -14,6 +15,14 @@ const PartnersItem = ({index, item }) => {
                     <h4>
                         {item.title}
                     </h4>
+                </div>
+                <div className="partner-item-img">
+                    <Image 
+                        src={item.img_src}
+                        width={item.image_width}
+                        height={item.image_height} 
+                        alt={item.title}
+                    />
                 </div>
                 <div className="partner-item-year">
                     <h4>

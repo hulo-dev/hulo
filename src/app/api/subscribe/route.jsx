@@ -1,46 +1,33 @@
-import { NextResponse } from "next/server";
-export async function GET(req, res){
-    /*const { email } = req.query;
-    console.log(email);
-   /* if (!email) {
-        return res.status(400).json({error: "Email is required."});
-    }
-    
-    try {
-        const FORM_ID = process.env.REACT_APP_CONVERTKIT_FORM_ID;
-        const API_KEY = process.env.REACT_APP_CONVERTKIT_API_KEY;
+import { NextRequest, NextResponse } from "next/server";
 
-        const data = {email, API_KEY };
 
-        const response = await fetch(`https://api.convertkit.com/v3/form/${FORM_ID}/subscribe`, {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {"Content-Type": "application/json"}
+export async function POST( req, res ){
+    const { email } = await req.body;
+	
+    console.log(':::::::',email);
+    const FORM_ID = process.env.REACT_APP_CONVERTKIT_FORM_ID;
+    const API_KEY = process.env.REACT_APP_CONVERTKIT_API_KEY;
+    // This is what needs to be submitted to ConvertKit's API
+    const FORM_DATA = { api_key: API_KEY, email };
 
-        });
 
-        if (response.status >= 400) {
-            return NextResponse.json({error: "There was an error subscribing to the list"});
+	if (!email) {
+	  return NextResponse.json(JSON.stringify({ error: "Email address is required" }));
+	}
+    const result = await fetch(
+        `https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`,
+        {
+          method: "POST",
+          headers: {"Content-Type": "application/json; charset=utf-8"},
+          body: JSON.stringify(FORM_DATA),
         }
+      );
 
-        return NextResponse.json({ error: '' });
+      if (result.status >= 400) {
+        return NextResponse.json({ error: "Something went wrong." });
+      }
 
-    } catch (error) {
 
-        return NextResponse.json({ error: error.message || error.toString() });
-
-    }*/
-  //  return NextResponse.json({ h });
-   // const { email } = req.query;
-   /* if (!email) {
-        return NextResponse.json({error:"нет емейла" });
-    }*/
-   // return NextResponse.json({ response:"выполнено гет" });
-    return NextResponse.json({ response:JSON.stringify(req)});
-}
-
-export async function POST(req){
-
-    return NextResponse.json({ response:"выполнено пост" });
+    return NextResponse.json({ success: true });
 
 }

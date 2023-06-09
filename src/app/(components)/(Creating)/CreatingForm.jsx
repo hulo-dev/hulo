@@ -21,7 +21,16 @@ const CreatingForm = () => {
         e.preventDefault();
       const email = inputRef.current.value;
       
-      const res  = await fetch(`/api/subscribe?email=${email}`);  
+      const res  = await fetch(`/api/subscribe`,{
+        body: JSON.stringify({
+            email: email
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          method: 'POST'
+          
+      });  
       console.log(res);
     }
 

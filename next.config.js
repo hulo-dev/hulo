@@ -9,8 +9,9 @@ const nextConfig = {
     output: 'export',
     images: { unoptimized: true },
     env:{
-      REACT_APP_CONVERTKIT_API_KEY:'vq_IA5HkNGRzDNeSnOmWyA',
-      REACT_APP_CONVERTKIT_FORM_ID:2923707
+      REACT_APP_CONVERTKIT_API_KEY: 'vq_IA5HkNGRzDNeSnOmWyA',
+      REACT_APP_CONVERTKIT_FORM_ID: 2923707,
+      API_CONVERTKIT_SUBSCRIBE: 'https://api.convertkit.com/v3/forms/2923707/subscribe'
     }
 }
 

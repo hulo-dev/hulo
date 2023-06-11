@@ -1,49 +1,32 @@
-'use client';
-
-import { useRef } from "react"
+"use client";
 import { DiagonalArrow } from "../Icons";
-import './CreatingForm.scss';
+import "./CreatingForm.scss";
+import axios from "axios";
 
- 
+const url = process.env.API_CONVERTKIT_SUBSCRIBE;
+const api_key = process.env.REACT_APP_CONVERTKIT_API_KEY;
 
 const CreatingForm = () => {
-    const inputRef = useRef(null);
-    
- 
-
-
-
-
-
-
-    
-    const onSubmit = async (e) => {
+    const onSubscribe = async (e) => {
         e.preventDefault();
-      const email = inputRef.current.value;
-      
-      const res  = await fetch(`/api/subscribe`,{
-        body: JSON.stringify({
-            email: email
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          method: 'POST'
-          
-      });  
-      console.log(res);
-    }
+        const email = e.target.email.value;
+        const data = { email, api_key };
 
+        try {
+            const res = await axios.post(url, data);
+            console.log(res.data);
+        } catch (e) {
+            console.log(e.response.data.message);
+        }
+    };
 
-    return(
+    return (
         <div>
-         
-            
-             <form onSubmit={onSubmit} className="form">
+            <form onSubmit={onSubscribe} method="post" className="form">
                 <div className="input_wrap">
                     <input
-                        ref={inputRef} 
-                        type={"email"}
+                        type="email"
+                        name="email"
                         placeholder="Bruse@wayne.com"
                         autoComplete="email"
                         required
@@ -58,8 +41,7 @@ const CreatingForm = () => {
                 </button>
             </form>
         </div>
-       
     );
-}
+};
 
 export default CreatingForm;

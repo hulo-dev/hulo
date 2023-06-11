@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import Footer from './(components)/(Footer)/Footer';
+import { Providers } from './providers';
 import ChangeFooter from './(components)/ChangeFooter';
 import Header from './(components)/Header/Header'
 import './global.scss'
@@ -20,11 +20,13 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
+    <html suppressHydrationWarning lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
       <body className={isLock ? 'lock' : ''}>
-        <Header lock={lockHandler} setIsLock={setIsLock}/>
-          {children}
-        <ChangeFooter />
+        <Providers>
+          <Header lock={lockHandler} setIsLock={setIsLock}/>
+            {children}
+          <ChangeFooter />
+        </Providers>
       </body>
     </html>
   )

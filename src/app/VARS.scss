@@ -25,6 +25,22 @@ $font-size-extra-small: clamp(14px, 0.833vw, 16px);
 $font-size-small: 14px;
 $font-size-less-small: 12px;
 
+[data-theme="light"] {
+    $color-background: #fffefe;
+    $color-background-paper: #f6f4f4;
+    $color-border-btn: #0e0d0d;
+    $color-border-btn-hover: #0d0c0c;
+    $border-block: rgba(255, 255, 255, 0.2);
+    $border-color: #121111;
+    $color-text: #151313;
+    $color-logo: #161414;
+    /*$color-background-card:*/
+    $color-bg-item-hover: #0e0d0d;
+    $color-bg-btn-hover: #111010;
+    $color-text-btn-hover: #eee3e3;
+    $color-btn-svg-stroke-hover: #f2e2e2;
+}
+
 %normal-300 {
     font-style: normal;
     font-weight: 300;

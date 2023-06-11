@@ -4,6 +4,7 @@ import "./Header.scss";
 
 import { Logo } from "./Logo";
 import Navbar from "./Navbar";
+import ThemeChanger from "./Switch";
 
 const Header = ({ lock }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,8 @@ const Header = ({ lock }) => {
                 <div className="header__wrap">
                     <Logo setIsOpen={setIsOpen} lock={lock} />
                     <Navbar isOpen={isOpen} setIsOpen={setIsOpen} lock={lock} />
+                    <ThemeChanger />
+
                     <div className="burger" onClick={openHandler}>
                         {!isOpen ? <span> Menu </span> : <span> Close </span>}
                     </div>

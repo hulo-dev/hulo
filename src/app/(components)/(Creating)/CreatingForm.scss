@@ -31,6 +31,17 @@
         }
         
     }
+    .message{
+        padding:10px;
+        border-radius: 10px;
+        background: #d3fbeb;
+        border-color: #10bf7a;
+        color: #0c905c;
+        font-size: $font-size-less-medium;
+    }
+    .hidden{
+        display:none;
+    }
 }
 
 
@@ -50,5 +61,9 @@
             }
             
         }
+        .message{
+            font-size: 16px;
+        }
     }
+   
 }

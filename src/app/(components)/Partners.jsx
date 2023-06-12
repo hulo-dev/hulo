@@ -13,7 +13,7 @@ const Partners = ({ class_name }) => {
                     width={177}
                     height={28}
                     src="shopify-partners-dark.png"
-                    alt="#"
+                    alt="1"
                 />
             </a>
             <a
@@ -26,7 +26,7 @@ const Partners = ({ class_name }) => {
                     width={159}
                     height={28}
                     src="circle-dark.png"
-                    alt="#"
+                    alt="2"
                 />
             </a>
             <a
@@ -39,7 +39,7 @@ const Partners = ({ class_name }) => {
                     width={109}
                     height={28}
                     src="shopify-plus-dark.png"
-                    alt="#"
+                    alt="3"
                 />
             </a>
         </div>

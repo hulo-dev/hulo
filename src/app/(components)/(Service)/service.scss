@@ -10,10 +10,6 @@
     flex-wrap: wrap;
     gap: 32px;
 
-    @media (max-width: 767px) {
-        gap: 16px;
-    }
-
     .services__text_wraper {
         background-color: $color-background-paper;
         padding: 32px;
@@ -21,9 +17,7 @@
         flex-basis: calc(66% - 16px);
         flex-grow: 1;
 
-        @media (max-width: 767px) {
-            border-radius: 8px;
-        }
+       
     }
 
     .services__text {
@@ -33,6 +27,22 @@
         line-height: 120%;
         font-weight: 300;
         letter-spacing: -0.5px;
+    }
+    @media (max-width: 767px) {
+        border-radius: 8px;
+        gap: 16px;
+        .name{
+            font-size: 16px;
+        }
+        .services__text_wraper{
+            padding: 16px;
+        }
+        .services__text{
+            margin-top:16px;
+            font-size: 28px;
+            line-height: 120%;
+            letter-spacing: -0.5px;
+        }
     }
 }
 
@@ -50,26 +60,6 @@
     &:hover &__body_wrapper {
         top: 0;
         transition: all 0.5s;
-    }
-
-    @media (min-width: 1100px) {
-        &:nth-child(4) {
-            flex-basis: calc(33% - 32px);
-        }
-    }
-
-    @media (max-width: 1100px) {
-        flex-basis: calc(50% - 16px);
-    }
-
-    @media (max-width: 767px) {
-        max-height: 66px;
-        border-radius: 8px;
-
-        &:hover &__body_wrapper {
-            top: 20px;
-            transition: all 0.5s;
-        }
     }
 
     &__title {
@@ -92,7 +82,7 @@
     }
     &__body_wrapper {
         height: 100%;
-        top: 100px;
+        top: 105px;
         position: relative;
         transition: all 0.5s;
     }
@@ -129,13 +119,112 @@
             right: 32px;
         }
     }
+
+
+    @media (min-width: 1100px) {
+        &:nth-child(4) {
+            flex-basis: calc(33% - 32px);
+        }
+    }
+
+    @media (max-width: 1100px) {
+        flex-basis: calc(50% - 16px);
+    }
+
+    @media (max-width: 767px) {
+        max-height: 1000px;
+        height: 100%;
+        border-radius: 8px;
+        flex-basis: 100%;
+        min-width: 0;
+        padding: 16px;
+        &__body_wrapper{
+            max-height: 0px;
+            top:0;
+            position: static;
+            overflow: hidden;
+            transition: all 0.5s !important;
+        }
+        &__text{
+            margin: 24px 0;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0.444444px;
+        }
+        .gfhf{
+            margin-bottom:0;
+            .text{
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 1.35px;
+                height: auto;
+                span{
+                    min-width: 10px;
+                    min-height: 10px;
+                    svg{
+                        width:10px;
+                        height: 10px;
+                    }
+                }
+            }
+            .border{
+                margin:24px 0 16px 0;
+            }
+            .sup__text{
+                font-size: 16px;
+                line-height: 140%;
+                letter-spacing: 0.15px;
+                .sup__sup{
+
+                }
+            }
+            .card__portfolio_img{
+                display: none;
+            }
+        }
+        &:hover &__body_wrapper {
+            top: 0px;
+            transition: none;
+        }
+        &__title {
+            font-size: 28px;
+            margin-bottom:0;
+            position: relative;
+            cursor: pointer;
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width:100%;
+                height: 100%;
+                position: absolute;
+                top:0;
+                left:0;
+                .icon_checked{
+                    position: static;
+                    transition: all 0.5s  ease;
+                }
+            }
+        }
+    }
+
+
 }
 .card--active {
     border: 1px solid $border-color;
-
+    .icon_checked{
+        transform: rotate(-180deg);
+        transform-origin: center center;
+        transition: all 0.5s ease;
+    }
+    .card__body_wrapper{
+        max-height: 1000px;
+       
+        transition: all 0.5s !important;
+    }
     @media (max-width: 767px) {
-        transition: all 0.5s;
-        max-height: 500px !important;
+        /*transition: all 0.5s;
+        max-height: 500px !important;*/
     }
 }
 

@@ -11,12 +11,15 @@ const Card = ({ data }) => {
         setActive(isActive);
     };
     return (
-        <div className={active ? "card card--active" : "card"}>
-            <span onClick={activeCard}>
-                <Checked />
-            </span>
+        <div onClick={activeCard} className={active ? "card card--active" : "card"}>
+          
 
-            <p className="card__title">{data.title}</p>
+            <p className="card__title">
+                {data.title}
+                <span >
+                    <Checked />
+                </span>
+            </p>
             <div className="card__body_wrapper">
                 <div className="card__body">
                     <p className="card__text">{data.text}</p>
@@ -29,9 +32,9 @@ const Card = ({ data }) => {
                                 <TextWithSup text="CASES" sup="65" />
                             </div>
                             <div className="card__portfolio_img">
-                                <Image height={50} width={50} src="/b1.png" />
-                                <Image height={50} width={50} src="/b2.png" />
-                                <Image height={50} width={50} src="/b3.png" />
+                                <Image height={50} width={50} src="/b1.png" alt=""/>
+                                <Image height={50} width={50} src="/b2.png" alt=""/>
+                                <Image height={50} width={50} src="/b3.png" alt=""/>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import './FeaturedTitle.scss';
+import "./FeaturedTitle.scss";
 
 const FeaturedTitle = () => {
     return (
@@ -6,6 +6,6 @@ const FeaturedTitle = () => {
             <h2>Featured Projects</h2>
         </div>
     );
-}
+};
 
 export default FeaturedTitle;

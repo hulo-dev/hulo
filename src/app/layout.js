@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html suppressHydrationWarning lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
+    <html suppressHydrationWarning lang="en" className='scroll-smooth'>
       <body className={isLock ? 'lock' : ''}>
         <Providers>
           <Header lock={lockHandler} setIsLock={setIsLock}/>

@@ -1,11 +1,14 @@
 import FeaturedItem from "./FeaturedItem";
-import './FeaturedList.scss'
-const FeaturedList = (props) => {
+import "./FeaturedList.scss";
+
+const FeaturedList = ({ elements }) => {
     return (
         <div className="featured-list">
-            {props.elements.map( (item) => (<FeaturedItem item={item}/>))}
+            {elements.map((item) => (
+                <FeaturedItem item={item.data} />
+            ))}
         </div>
     );
-}
+};
 
 export default FeaturedList;

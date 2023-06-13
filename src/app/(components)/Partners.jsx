@@ -12,7 +12,7 @@ const Partners = ({ class_name }) => {
                     className="img-dark"
                     width={177}
                     height={28}
-                    src="shopify-partners-dark.png"
+                    src={'/shopify-partners-dark.png'}
                     alt="1"
                 />
             </a>
@@ -25,7 +25,7 @@ const Partners = ({ class_name }) => {
                     className="img-dark"
                     width={159}
                     height={28}
-                    src="circle-dark.png"
+                    src={'/circle-dark.png'}
                     alt="2"
                 />
             </a>
@@ -35,10 +35,10 @@ const Partners = ({ class_name }) => {
                 href="https://www.shopify.com/free-trial?irclickid=QXKzuSR0xzC5WYT1DM1U8zi7UkDVD62APVKQyQ0&irgwc=1&partner=2454069&affpt="
             >
                 <Image
-                    className="/img-dark"
+                    className="img-dark"
                     width={109}
                     height={28}
-                    src="shopify-plus-dark.png"
+                    src={'/shopify-plus-dark.png'}
                     alt="3"
                 />
             </a>

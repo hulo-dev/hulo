@@ -380,3 +380,13 @@ export const Checked = () => {
         </svg>
     );
 };
+
+
+export const DiagonalArrowSmall = () => {
+
+    return(
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.5" d="M1 1H17M17 1V17M17 1L1 17" stroke="white"/>
+        </svg>
+    );
+};

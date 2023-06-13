@@ -25,7 +25,7 @@ const Header = ({ lock }) => {
                 <div className="header__wrap">
                     <Logo setIsOpen={setIsOpen} lock={lock} />
                     <Navbar isOpen={isOpen} setIsOpen={setIsOpen} lock={lock} />
-                    <ThemeChanger />
+                    {/*<ThemeChanger />*/}
 
                     <div className="burger" onClick={openHandler}>
                         {!isOpen ? <span> Menu </span> : <span> Close </span>}

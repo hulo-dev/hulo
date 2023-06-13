@@ -25,9 +25,12 @@ html {
     margin: 0;
 }
 
-body {
+html,body {
     background: $color-background;
     font-family: "Work Sans";
+    height: 100%;
+    display:flex;
+    flex-direction: column;
 }
 .lock {
     overflow: hidden;

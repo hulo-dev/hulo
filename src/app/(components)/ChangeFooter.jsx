@@ -8,7 +8,7 @@ const ChangeFooter = () => {
         pathname != "/Contact/" ? (
             <Footer copy={true} partners={true} btn={false} />
         ) : (
-            <Footer copy={false} partners={true} btn={true} />
+            <Footer class_name="footer_contact" copy={false} partners={true} btn={true} />
         );
 
     return footer;

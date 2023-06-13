@@ -44,7 +44,21 @@
         }
     }
 }
-
+.footer.footer_contact{
+    margin-top:auto;
+    border-top:1px solid $border-block;
+    .footer__wrap{
+        padding:20px 0;
+    }
+    .btn{
+        height: 61px;
+        padding: 0 24px;
+        border-radius: 24px;
+        .flag{
+            margin-right:10px;
+        }
+    }
+}
 @media (max-width:767px){
     .footer{
         &__wrap{
@@ -93,6 +107,20 @@
             .flag{
                 margin-right:10px;
             }
+        }
+    }
+
+
+    .footer.footer_contact{
+        .footer__btn{
+            width: 100%;
+            order:1;
+            display:flex;
+            justify-content: center;
+            margin-bottom:30px;
+        }
+        .footer-parters{
+            order:2;
         }
     }
 }

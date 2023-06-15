@@ -24,12 +24,12 @@
     }
     h5{
         @extend %normal-300;
-        color: $color-text;
+        color: var(--color-text);
         font-size: $font-size-medium;
     }
     p{
         @extend %normal-300;
-        color: $color-text;
+        color: var(--color-text);
         font-size: $font-size-extra-small;
     }
     
@@ -50,7 +50,7 @@
         align-items: center;
         opacity: 0;
         text-decoration: none;
-        color:$color-text;
+        color:var(--color-text);
     }
     &:hover{
         
@@ -58,7 +58,7 @@
             opacity: 1;
             .btn{
                 background:$color-bg-btn-hover ;
-                color:$color-text-btn-hover;
+                color:var(--color-text-btn-hover);
                 span{
                     svg:first-child{
                         top: -4px;
@@ -71,8 +71,8 @@
                     }
                     svg{
                         path{
-                            fill: $color-btn-svg-stroke-hover;
-                            stroke: $color-btn-svg-stroke-hover;
+                            fill: var(--color-btn-svg-stroke-hover);
+                            stroke: var(--color-btn-svg-stroke-hover);
                         }
                     }
                 }

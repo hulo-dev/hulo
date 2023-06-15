@@ -6,13 +6,13 @@
         font-size: $font-size-less-small;
         line-height: 16px;
         letter-spacing: 0.4px;
-        color: $color-text;
+        color: var(--color-text);
         margin-bottom:clamp(8px,0.781vw,15px);
         display:inline-block;
     }
     .input-wrap{
         padding-bottom:clamp(7px,1.250vw,24px);
-        border-bottom: 1px solid $border-block;
+        border-bottom: 1px solid var(--border-block);
         margin-bottom:clamp(19px,3.333vw,64px);
         .text-field{
             display:block;
@@ -25,13 +25,13 @@
             font-size: $font-size-exta-medium;
             line-height: 140%;
             letter-spacing: 0.25px;
-            color: $color-text;
+            color: var(--color-text);
             &::placeholder{
                 @extend %normal-400;
                 font-size: $font-size-exta-medium;
                 line-height: 140%;
                 letter-spacing: 0.25px;
-                color: $color-text;
+                color: var(--color-text);
             }
             &:focus{
                 border:none;

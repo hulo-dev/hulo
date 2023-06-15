@@ -21,6 +21,14 @@
             left:auto;
             width:clamp(14px,2.500vw,48px);
             height: clamp(14px,2.500vw,48px);
+            svg{
+                path{
+                    stroke: var(--color-svg);
+                }
+                rect{
+                    stroke: var(--color-svg);
+                }
+            }
         }
         .slider-arrow::after{
             content: none;
@@ -51,7 +59,7 @@
         .slider-controller{
             /*height: 64px;*/
            
-            border-top: 1px solid $border-block;
+            border-top: 1px solid var(--border-block);
             padding: 8px;
             display:flex;
             justify-content: space-between;
@@ -64,6 +72,7 @@
                     path{
                         transform-origin: center center;
                         transform: rotate(45deg);
+                        
                     }
                 }
             }

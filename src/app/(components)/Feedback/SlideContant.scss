@@ -12,6 +12,9 @@
         max-height: clamp(14px,2.500vw,48px);
         float:left;
         margin-right:clamp(78px,13.594vw,261px);
+        path{
+            fill: var(--color-svg);
+        }
     }
     p{
        
@@ -19,7 +22,7 @@
         font-size: $font-size-exta-medium;
         line-height: 140%;
         letter-spacing: 0.25px;
-        color: $color-text;
+        color: var(--color-text);
     }
 }
 .slide-img{
@@ -38,7 +41,7 @@
         font-size: $font-size-exta-medium;
         line-height: 140%;
         letter-spacing: 0.25px;
-        color: $color-text;
+        color: var(--color-text);
     }
 }
 .slide-text__profession{
@@ -47,7 +50,7 @@
         font-size: $font-size-extra-small;
         line-height: 140%;
         letter-spacing: 0.25px;
-        color: $color-text;
+        color: var(--color-text);
     }
 }
 
@@ -63,6 +66,7 @@
             max-height: 24px;
             
             margin-right:24px;
+
         }
         p{
 

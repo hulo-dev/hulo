@@ -6,7 +6,7 @@
             font-size: $font-size-extra-small;
             line-height: 140%;
             letter-spacing: 0.444444px;
-            color:$color-text;
+            color:var(--color-text);
         }
     }
     &__wrap{
@@ -46,7 +46,7 @@
 }
 .footer.footer_contact{
     margin-top:auto;
-    border-top:1px solid $border-block;
+    border-top:1px solid var(--border-block);
     .footer__wrap{
         padding:20px 0;
     }
@@ -70,7 +70,7 @@
             display: flex;
             justify-content: center;
             padding: 16px 0 40px 0;
-            border-top:1px solid $border-block;
+            border-top:1px solid var(--border-block);
             span{
               
             }

@@ -2,7 +2,7 @@
 .our-partners{
     &-name{
         padding-bottom:22px;
-        border-bottom: 1px solid $border-block;
+        border-bottom: 1px solid var(--border-block);
     }
     .partner-more{
         margin-top:clamp(20px,2.917vw,56px);
@@ -11,7 +11,7 @@
             @extend %normal-300;
             letter-spacing: 0.25px;
             line-height: 140%;
-            color:$color-text;
+            color:var(--color-text);
         }
     }
 }

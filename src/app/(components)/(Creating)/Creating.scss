@@ -5,7 +5,7 @@
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-        border-top: 1px solid $border-block;
+        border-top: 1px solid var(--border-block);
         padding-top:clamp(24px,3.333vw,64px);
     }
     .cart-start{
@@ -40,7 +40,9 @@
         }
         &__wrap{
             padding:clamp(9px,1.667vw,32px);
-            background: #262626;
+            background: var(--color-background-paper);
+            background-size: cover;
+            background-position: center;
             border-radius: clamp(10px,1.250vw,24px);
             height: 100%
            
@@ -51,7 +53,7 @@
                 @extend %normal-300;
                 font-size: $font-size-less-large;
                 line-height: 120%;
-                color:$color-text;
+                color:var(--color-text);
                 letter-spacing: 0;
             }
         }
@@ -60,7 +62,7 @@
                 @extend %normal-300;
                 font-size: $font-size-less-medium;
                 line-height: 140%;
-                color:$color-text;
+                color:var(--color-text);
                 letter-spacing: 0.15px;
             }
         }
@@ -71,14 +73,14 @@
             line-height: 120%;
             letter-spacing: 0;
             font-size: clamp(4px,0.833vw,16px);
-            color:$color-text;
+            color:var(--color-text);
         }
     }
     .location-btn{
         .btn{
             height: auto;
             padding:clamp(7px,1.250vw,24px);
-            border: 1px solid $border-block;
+            border: 1px solid var(--border-block);
             border-radius: clamp(7px,1.250vw,24px);
             flex-wrap:wrap;
             justify-content: space-between;
@@ -87,7 +89,7 @@
             line-height: 120%;
             letter-spacing: 0;
             font-size: $font-size-medium;
-            color:$color-text;
+            color:var(--color-text);
             .text{
                 display:block;
                 width:100%;
@@ -103,7 +105,7 @@
 
         }
         .btn:hover{
-            color:$color-text-btn-hover;
+            color:var(--color-text-btn-hover);
             .flag{
                 path:first-child{
                     fill:#CC0000;;
@@ -118,7 +120,7 @@
 
 @media (max-width:767px){
     .creating{
-        border-top: 1px solid $border-block;
+        border-top: 1px solid var(--border-block);
         .btn{
             width:100%;
             justify-content: space-between;
@@ -155,7 +157,9 @@
             }
             &__wrap{
                 padding:clamp(9px,1.667vw,32px);
-                background: #262626;
+                background: var(--color-background-paper);
+                background-size: cover;
+                background-position: center;
                 border-radius: clamp(10px,1.250vw,24px);
                 height: 100%;
                 padding:16px;

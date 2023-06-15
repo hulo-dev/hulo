@@ -14,7 +14,7 @@
         .name {
             width: 100%;
             display: inline-block;
-            border-bottom: 1px solid $border-color;
+            border-bottom: 1px solid var(--border-color);
             padding: 10px 0 22px 0;
         }
     }
@@ -26,7 +26,7 @@
         h3 {
             @extend %normal-300;
             font-size: $font-size-large;
-            color: $color-text;
+            color: var(--color-text);
             line-height: 120%;
             letter-spacing: -0.5px;
             span {
@@ -41,7 +41,7 @@
             letter-spacing: 0;
             font-size: $font-size-medium;
             @extend %normal-300;
-            color: $color-text;
+            color: var(--color-text);
         }
     }
 }

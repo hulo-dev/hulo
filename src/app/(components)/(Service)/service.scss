@@ -11,7 +11,9 @@
     gap: 32px;
 
     .services__text_wraper {
-        background-color: $color-background-paper;
+        background: var(--color-background-paper);
+        background-size: cover;
+        background-position: center;
         padding: 32px;
         border-radius: 24px;
         flex-basis: calc(66% - 16px);
@@ -23,7 +25,7 @@
     .services__text {
         margin-top: 27px;
         font-size: $font-size-large;
-        color: $color-text;
+        color: var(--color-text);
         line-height: 120%;
         font-weight: 300;
         letter-spacing: -0.5px;
@@ -47,7 +49,9 @@
 }
 
 .card {
-    background-color: $color-background-paper;
+    background: var(--color-background-paper);;
+    background-size: cover;
+    background-position: center;
     border-radius: 24px;
     flex-basis: calc(33% - 16px);
     min-width: 310px;
@@ -64,12 +68,17 @@
 
     &__title {
         font-size: $font-size-exta-medium;
-        color: $color-text;
+        color: var(--color-text);
         margin-bottom: 15px;
+        svg{
+            path{
+                stroke:var(--color-svg);
+            }
+        }
     }
     &__text {
         font-size: $font-size-extra-small;
-        color: $color-text;
+        color: var(--color-text);
         font-family: Work Sans;
 
         font-weight: 300;
@@ -232,17 +241,17 @@
 .sup {
     &__text {
         font-size: $font-size-medium;
-        color: $color-text;
+        color: var(--color-text);
     }
     &__sup {
         font-size: $font-size-extra-small;
-        color: $color-text;
+        color: var(--color-text);
     }
 }
 
 .border {
     margin: 23px 0;
-    background-color: $color-text;
+    background-color: var(--color-text);
     display: block;
     height: 1px;
     width: 100%;

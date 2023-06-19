@@ -11,6 +11,7 @@
     .title{
         margin-bottom:0px;
         width: 100%;
+        pointer-events: none;
         h2{
             @extend %italic-400;
             font-size: $font-size-extra-large;
@@ -37,6 +38,30 @@
         &__right{
             margin-top: -100px;
         }
+    }
+}
+.form-textbox{
+        
+    color:red !important;
+
+}
+.supernova{
+    display:none !important;
+}
+.iframeContact{
+
+    border:0;
+    body::-webkit-scrollbar{
+        width:0;
+    }
+    .formFooter-heightMask{
+        display:none;
+
+    }
+    .form-textbox{
+        
+            color:red !important;
+        
     }
 }
 @media (max-width:767px){

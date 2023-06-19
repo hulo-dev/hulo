@@ -1,86 +1,79 @@
 "use client";
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { DiagonalArrow } from "../Icons";
 import "./Form.scss";
+import emailjs from '@emailjs/browser';
+import ThankForm from "./ThankForm";
 
 const Form = () => {
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
-
-    const onSubmitHandler = async (e) => {
+    const form = useRef();
+    const [thank, setThank] = useState(false);
+    const sendEmail = (e) => {
         e.preventDefault();
-        const body =
-        {
-           
-            'q3_yourName':name,
-            'q4_yourEmail':email,
-            'q5_message':message,
+    
+        emailjs.sendForm('service_277fkue', 'template_ujqyz3h', form.current, 'b7QbGHOAfTqpLbWmh')
+            .then((result) => {
+                console.log(result.text);
+                if(result.status === 200){
+                    setThank(true);
+                }
+            }, (error) => {
+                console.log(error.text);
+            });
         };
-        try {
-
-            let api = axios.create({baseURL:"https://eu-submit.jotform.com/submit", headers:{credentials: 'include'}});
-            const res = await api.post("/222884108909060/", body);
-
-            console.log("forme");
-            console.log(res);
-        } catch (error) {
-            console.log("err", error);
-        }
-    };
 
     return (
-        <form onSubmit={onSubmitHandler} className="contact-form">
-            <div className="field">
-                <label>Your name</label>
-                <div className="input-wrap">
-                    <input
-                        className="text-field"
-                        type="text"
-                        placeholder="Your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
+        <div>
+           {!thank && <form ref={form} onSubmit={sendEmail} className="contact-form">
+                <input type="hidden" name="form_name" value="HULO DEV"/>
+                <div className="field">
+                    <label>Your name</label>
+                    <div className="input-wrap">
+                        <input
+                            className="text-field"
+                            type="text"
+                            placeholder="Your name"
+                            name="user_name"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className="field">
-                <label>Your email*</label>
-                <div className="input-wrap">
-                    <input
-                        className="text-field"
-                        type="email"
-                        required
-                        placeholder="Your email*"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+                <div className="field">
+                    <label>Your email*</label>
+                    <div className="input-wrap">
+                        <input
+                            className="text-field"
+                            type="email"
+                            required
+                            placeholder="Your email*"
+                            name="user_mail"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className="field">
-                <div className="input-wrap">
-                    <textarea
-                        required
-                        onChange={(e) => setMessage(e.target.value)}
-                        className="text-field"
-                        placeholder="Message*"
-                        value={message}
-                    ></textarea>
+                <div className="field">
+                    <div className="input-wrap">
+                        <textarea
+                            required
+                            className="text-field"
+                            placeholder="Message*"
+                            name="user_message"
+                        ></textarea>
+                    </div>
                 </div>
-            </div>
-            <div className="submit">
-                <button type="submit" className="btn">
-                    Submit
-                    <span>
-                        <DiagonalArrow />
-                        <DiagonalArrow />
-                    </span>
-                </button>
-            </div>
-        </form>
+                <div className="submit">
+                    <button type="submit" className="btn">
+                        Submit
+                        <span>
+                            <DiagonalArrow />
+                            <DiagonalArrow />
+                        </span>
+                    </button>
+                </div>
+            </form>}
+            {thank && <ThankForm/>}
+        </div>
     );
 };
 
 export default Form;
+

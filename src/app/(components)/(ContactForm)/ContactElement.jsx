@@ -1,9 +1,12 @@
+"use client";
 import ContactSocial from "./ContactSocial";
 import Form from "./Form";
 
 import "./ConntactElement.scss";
+import { useEffect, useRef } from "react";
 
 const ContactElement = () => {
+
     return (
         <div className="contact">
             <div className="container">

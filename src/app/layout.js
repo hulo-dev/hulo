@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html suppressHydrationWarning lang="en" className='scroll-smooth'>
       <body className={isLock ? 'lock' : ''}>
         <div className='overlay'/>
-        <Providers>
+        <Providers >
           <Header lock={lockHandler} setIsLock={setIsLock}/>
             {children}
           <ChangeFooter />

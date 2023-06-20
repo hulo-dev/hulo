@@ -33,7 +33,41 @@
        
     }
 }
+.switcher-theme{
+    margin-left:auto;
+    border:1px solid var(--color-border-btn);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    &:before{
+        content:'';
+        position: absolute;
+        top:0;
+        left:50%;
+        width:1px;
+        height: 100%;
+        transform: translateX(-50%);
+        background: var(--color-border-btn);
+    }
+    button{
+        padding:10px;
+        cursor:pointer;
+        @extend %normal-400;
+        font-size: $font-size-small;
+        line-height: 120%;
+        letter-spacing: 1.35px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color-text);
+        background:transparent;
+        border:none;
 
+    }
+    button.active{
+        background: var(--bg-switcher);
+        color:var(--color-text-switcher);
+    }
+}
 .burger{
     display:none;
     position: relative;

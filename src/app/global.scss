@@ -2,14 +2,7 @@
 @import "./VARS.scss";
 
 
-
-
-
-
-
-
-
-@media (prefers-color-scheme: dark){
+/*@media (prefers-color-scheme: dark){
     :root{
         --color-background: #202020;
         --color-background-paper: url('/itembgDark.png');
@@ -51,8 +44,53 @@
         --filter-img:invert(0.8);
         --filter-img1:invert(0.3);
      }
-}
+}*/
 
+
+
+:root{
+    --color-background: #F5F4F4;
+    --color-background-paper:url('/itembgLight.png');
+    --color-border-btn: #202020;
+    --color-border-btn-hover: #EAEAEA;
+    --border-block: rgba(32, 32, 32, 0.2);
+    --border-color: rgba(32, 32, 32, 0.2);
+    --color-text: #202020;
+    --color-logo: #202020;
+    --color-bg-item-hover: #202020;
+    --color-bg-btn-hover: #FFFFFF;
+    --color-text-btn-hover: #202020;
+    --color-btn-svg-stroke-hover:#202020;
+
+    --color-svg:#202020;
+    --color-logo:#202020;
+    --filter-img:invert(0.8);
+    --filter-img1:invert(0.3);
+    --bg-switcher:#202020;
+    --color-text-switcher:#FFFFFF;
+}
+[data-theme="dark"]{
+    --color-background: #202020;
+    --color-background-paper: url('/itembgDark.png');
+    --color-border-btn: #ffffff;
+    --color-border-btn-hover: #ffffff;
+    --border-block: rgba(255, 255, 255, 0.2);
+    --border-color: #ffffff;
+    --color-text: #ffffff;
+    --color-logo: #ffffff;
+    --color-bg-item-hover: #ffffff;
+    --color-bg-btn-hover: #ffffff;
+    --color-text-btn-hover: #202020;
+    --color-btn-svg-stroke-hover: #202020;
+
+
+    --color-svg:#FFFFFF;
+    --color-logo:#FFFFFF;
+    --filter-img:invert(0);
+    --filter-img1:invert(0);
+    --bg-switcher:#FFFFFF;
+    --color-text-switcher:#202020;
+}
 
 html {
     scroll-behavior: smooth;

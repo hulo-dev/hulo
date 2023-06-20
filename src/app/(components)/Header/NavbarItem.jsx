@@ -1,9 +1,10 @@
+'use client';
 import Link from "next/link";
 import "./NavbarItem.scss";
 import React from "react";
 //import { Link } from 'react-scroll';
 const NavbarItem = ({ link, name, setIsOpen, lock }) => {
-    const linkCLickHandler = () => {
+    const linkCLickHandler = (e) => {
         setIsOpen(false);
         lock(false);
     };

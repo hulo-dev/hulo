@@ -1,5 +1,5 @@
 "use client";
-import { EffectFade, Autoplay } from "swiper";
+import { EffectFade, Autoplay, FreeMode } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import Image from "next/image";
 const Slider = ({ data }) => {
     return (
         <Swiper
-            modules={[EffectFade, Autoplay]}
+            modules={[EffectFade, Autoplay, FreeMode]}
             loop={true}
             spaceBetween={50}
             effect={"fade"}
@@ -18,7 +18,7 @@ const Slider = ({ data }) => {
             }}
             slidesPerView={1}
             onSlideChange={() => {}}
-            onSwiper={(swiper) => console.log(swiper)}
+          
         >
             {data.map((e) => (
                 <SwiperSlide key={e.id}>

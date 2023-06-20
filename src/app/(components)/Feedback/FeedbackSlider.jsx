@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide} from 'swiper/react';
-import { EffectFade, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { EffectFade, Navigation, Pagination, Scrollbar, A11y, FreeMode } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import SlideContant from './SlideContant';
 import { NextArrow, PrevArrow } from '../Icons';
@@ -52,7 +52,7 @@ const FeedbackSlider = () => {
                 }}
                 spaceBetween={30}
                 effect={"fade"}
-                modules={[EffectFade,Navigation]} 
+                modules={[EffectFade, Navigation, FreeMode]} 
                 className="mySwiper feedback-swiper">
 
                {FEEDBACK_CLIENT.map((slide, index) => (

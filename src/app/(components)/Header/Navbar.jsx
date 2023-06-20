@@ -6,7 +6,7 @@ import Mail from "./Mail";
 
 const NAVIGATION__LINKS = [
     {
-        href: "/",
+        href: "/#about",
         name: "about",
     },
     {
@@ -14,7 +14,7 @@ const NAVIGATION__LINKS = [
         name: "services",
     },
     {
-        href: "/",
+        href: "/#work",
         name: "works",
     },
     {

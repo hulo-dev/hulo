@@ -30,29 +30,34 @@ const Card = ({ data }) => {
                         <span className="border"></span>
                         <div className="card__portfolio">
                             <div className="card__portfolio_text">
-                                <TextWithSup text="TIMELINE 4-6" sup="WEEKS" />
-                                <TextWithSup text="CASES" sup="65" />
+                                <TextWithSup
+                                    text={data.timeline}
+                                    sup={data.timelinesup}
+                                />
+                                <TextWithSup text="CASES" sup={data.cases} />
                             </div>
-                            <div className="card__portfolio_img">
-                                <Image
-                                    height={50}
-                                    width={50}
-                                    src={data.img1}
-                                    alt=""
-                                />
-                                <Image
-                                    height={50}
-                                    width={50}
-                                    src={data.img2}
-                                    alt=""
-                                />
-                                <Image
-                                    height={50}
-                                    width={50}
-                                    src={data.img3}
-                                    alt=""
-                                />
-                            </div>
+                            {!!data.img1 && (
+                                <div className="card__portfolio_img">
+                                    <Image
+                                        height={50}
+                                        width={50}
+                                        src={data.img1}
+                                        alt=""
+                                    />
+                                    <Image
+                                        height={50}
+                                        width={50}
+                                        src={data.img2}
+                                        alt=""
+                                    />
+                                    <Image
+                                        height={50}
+                                        width={50}
+                                        src={data.img3}
+                                        alt=""
+                                    />
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -68,9 +73,11 @@ const TextWithSup = ({ text, sup }) => {
         <>
             <p className="sup__text">
                 {text}
-                <span>
-                    <sup className="sup__sup">{sup}</sup>
-                </span>
+                {!!sup && (
+                    <span>
+                        <sup className="sup__sup">{sup}</sup>
+                    </span>
+                )}
             </p>
         </>
     );

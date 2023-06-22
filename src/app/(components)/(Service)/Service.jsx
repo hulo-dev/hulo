@@ -1,4 +1,3 @@
-import Image from "next/image";
 import data from "./data.json";
 import "./service.scss";
 import Card from "./Card";

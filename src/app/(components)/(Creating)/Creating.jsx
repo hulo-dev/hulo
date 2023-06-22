@@ -1,11 +1,10 @@
 import StartCreating from "./StartCreating";
 import WantUpdate from "./WantUpdate";
-import './Creating.scss';
+import "./Creating.scss";
 import Location from "./Location";
 
 const Creating = () => {
-    
-    return(
+    return (
         <div className="creating section">
             <div className="container">
                 <div className="creating__wrap">
@@ -16,6 +15,6 @@ const Creating = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Creating;

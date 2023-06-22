@@ -1,4 +1,3 @@
-
 import { DiagonalArrow, TestIcon } from "../Icons";
 import { createClient } from "@prismicio/client";
 import Link from "next/link";
@@ -22,7 +21,10 @@ const Amazing = async () => {
                             AMAZING CUSTOM&nbsp;
                         </h2>
                         <h2 className="amazing__content-title  t2">
-                            <span className="italic">SQUARESPACE & SHOPIFY</span> DESIGN
+                            <span className="italic">
+                                SQUARESPACE & SHOPIFY
+                            </span>{" "}
+                            DESIGN
                         </h2>
                         <div className="amazing__content-subtitle">
                             <p>

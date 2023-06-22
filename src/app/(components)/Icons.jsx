@@ -105,11 +105,6 @@ export const TestIcon = () => {
         >
             <clipPath id="sliderSvg" clipPathUnits="objectBoundingBox">
                 <path
-                    // d="M0 0 L 1000 0 L 1000 240 Q 1000 250 990 250 L 660 250 Q 650 250 650 260 L 650 290 Q 650 300 640 300 L 0 300 Z"
-                    // d="M0 0 L 1 0 L 1 0.24 Q 1 0.25 0.99 0.25 L 0.66 0.25 Q 0.65 0.25 0.65 0.26 L 0.65 0.29 Q 0.65 0.3 0.64 0.3 L 0 0.3 Z"
-                    // d="M0 0 L 1 0 L 1 0.8 Q 1 0.85 0.95 0.85 L 0.66 0.84 Q 0.65 0.84 0.65 0.85 L 0.65 0.99 Q 0.65 1 0.64 1 L 0 1 Z"
-                    // d="M0 0 L 1 0 L 1 0.8 Q 1 0.85 0.95 0.85 L 0.66 0.84 Q 0.65 0.84 0.65 0.85 L 0.65 0.99 Q 0.65 1 0.64 1 L 0 1 Z"
-                    // d="M0 0 L 1 0 L 1 0.8 Q 1 0.85 0.985 0.85 L 0.66 0.85 Q 0.645 0.85 0.645 0.9 L 0.645 0.95 Q 0.645 1 0.63 1 L 0 1 Z"
                     d="M0 0.05 Q 0 0 0.015 0 L 0.985 0 Q 1 0 1 0.05  L 1 0.8 Q 1 0.85 0.985 0.85 L 0.66 0.85 Q 0.645 0.85 0.645 0.9 L 0.645 0.95 Q 0.645 1 0.63 1 L 0.015 1 Q 0 1 0 0.95 Z"
                     stroke="white"
                     strokeWidth="2"
@@ -381,12 +376,16 @@ export const Checked = () => {
     );
 };
 
-
 export const DiagonalArrowSmall = () => {
-
-    return(
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.5" d="M1 1H17M17 1V17M17 1L1 17" stroke="white"/>
+    return (
+        <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path opacity="0.5" d="M1 1H17M17 1V17M17 1L1 17" stroke="white" />
         </svg>
     );
 };

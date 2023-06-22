@@ -5,7 +5,7 @@ const FeaturedList = ({ elements }) => {
     return (
         <div className="featured-list">
             {elements.map((item) => (
-                <FeaturedItem item={item.data} />
+                <FeaturedItem key={item.id} item={item.data} />
             ))}
         </div>
     );

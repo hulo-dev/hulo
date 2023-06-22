@@ -8,17 +8,16 @@ const url = process.env.API_CONVERTKIT_SUBSCRIBE;
 const api_key = process.env.REACT_APP_CONVERTKIT_API_KEY;
 
 const CreatingForm = () => {
-
     const [message, setMessage] = useState(false);
 
     const onSubscribe = async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const data = { email, api_key };
-        
+
         try {
             const res = await axios.post(url, data);
-            if(res.status === 200){
+            if (res.status === 200) {
                 setMessage(true);
             }
         } catch (e) {
@@ -38,14 +37,23 @@ const CreatingForm = () => {
                         required
                     />
                 </div>
-                <button type="submit" className={message ? "btn hidden" : "btn"}>
+                <button
+                    type="submit"
+                    className={message ? "btn hidden" : "btn"}
+                >
                     subscribe
                     <span>
                         <DiagonalArrow />
                         <DiagonalArrow />
                     </span>
                 </button>
-                {message && <p className="message"> Success! Now check your email to confirm your subscription. </p>}
+                {message && (
+                    <p className="message">
+                        {" "}
+                        Success! Now check your email to confirm your
+                        subscription.{" "}
+                    </p>
+                )}
             </form>
         </div>
     );

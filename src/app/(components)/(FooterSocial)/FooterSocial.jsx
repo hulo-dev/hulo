@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { FooterSocialDesigIcon } from "../Icons";
-import './FooterSocial.scss';
-
+import "./FooterSocial.scss";
 
 const FooterSocial = ({ class_name }) => {
-    
     return (
         <div className={class_name}>
             <div className="container">
@@ -15,19 +13,13 @@ const FooterSocial = ({ class_name }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#">
-                            linkedin
-                        </Link>
+                        <Link href="#">linkedin</Link>
                     </li>
                     <li>
-                        <Link href="#">
-                            facebook
-                        </Link>
+                        <Link href="#">facebook</Link>
                     </li>
                     <li>
-                        <Link href="#">
-                            instagram
-                        </Link>
+                        <Link href="#">instagram</Link>
                     </li>
                     <li>
                         <Link className="bold" href="#">

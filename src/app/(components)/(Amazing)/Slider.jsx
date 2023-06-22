@@ -18,7 +18,6 @@ const Slider = ({ data }) => {
             }}
             slidesPerView={1}
             onSlideChange={() => {}}
-          
         >
             {data.map((e) => (
                 <SwiperSlide key={e.id}>

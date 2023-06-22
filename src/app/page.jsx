@@ -17,15 +17,16 @@ export default async function Home() {
     const featured = projects.results.filter((e) =>
         e.tags.some((tag) => tag == "featured")
     );
-    console.log("featured");
-    console.log(featured[0].data);
+    const works = projects.results.filter((e) =>
+        e.tags.some((tag) => tag == "work")
+    );
 
     return (
         <div>
             <Amazing />
             <About />
             <Featured data={featured} />
-            <Work />
+            <Work data={works} />
             <Service />
             <OurPartners />
             <Feedback />

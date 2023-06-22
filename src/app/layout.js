@@ -1,9 +1,9 @@
 'use client'
+import './global.scss'
 import { useState } from 'react';
 import { Providers } from './providers';
 import ChangeFooter from './(components)/ChangeFooter';
 import Header from './(components)/Header/Header'
-import './global.scss'
 
 // export const metadata = {
 //   title: 'Hulo Dev Next js',

@@ -36,19 +36,19 @@ const Card = ({ data }) => {
                                 <Image
                                     height={50}
                                     width={50}
-                                    src="/b1.png"
+                                    src="b1.png"
                                     alt=""
                                 />
                                 <Image
                                     height={50}
                                     width={50}
-                                    src="/b2.png"
+                                    src="b2.png"
                                     alt=""
                                 />
                                 <Image
                                     height={50}
                                     width={50}
-                                    src="/b3.png"
+                                    src="b3.png"
                                     alt=""
                                 />
                             </div>

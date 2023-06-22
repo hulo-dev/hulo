@@ -3,7 +3,7 @@
 
 :root {
     --color-background: #f5f4f4;
-    --color-background-paper: url(itembgLight.png);
+    --color-background-paper: url("../../public/itembgLight.png");
     --color-border-btn: #202020;
     --color-border-btn-hover: #eaeaea;
     --border-block: rgba(32, 32, 32, 0.2);
@@ -24,7 +24,7 @@
 }
 [data-theme="dark"] {
     --color-background: #202020;
-    --color-background-paper: url(itembgDark.png);
+    --color-background-paper: url("../../public/itembgDark.png");
     --color-border-btn: #ffffff;
     --color-border-btn-hover: #ffffff;
     --border-block: rgba(255, 255, 255, 0.2);

@@ -19,7 +19,7 @@ const Service = () => {
                         </p>
                     </div>
                     {data.data.map((e) => (
-                        <Card data={e} />
+                        <Card key={e.id} data={e} />
                     ))}
                 </div>
             </div>

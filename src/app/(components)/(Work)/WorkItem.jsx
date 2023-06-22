@@ -8,7 +8,7 @@ const WorkItem = ({ item }) => {
 
     return (
         <li className="more-item">
-            <Link href={item.link.url}>
+            <Link href={item.link.url} target="_blank">
                 <div className="more-item__wrap">
                     <div className="more-title title">
                         <h4>{item.title[0].text}</h4>

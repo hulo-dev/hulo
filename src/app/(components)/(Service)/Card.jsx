@@ -10,6 +10,7 @@ const Card = ({ data }) => {
         let isActive = active ? false : true;
         setActive(isActive);
     };
+
     return (
         <div
             onClick={activeCard}
@@ -36,19 +37,19 @@ const Card = ({ data }) => {
                                 <Image
                                     height={50}
                                     width={50}
-                                    src="b1.png"
+                                    src={data.img1}
                                     alt=""
                                 />
                                 <Image
                                     height={50}
                                     width={50}
-                                    src="b2.png"
+                                    src={data.img2}
                                     alt=""
                                 />
                                 <Image
                                     height={50}
                                     width={50}
-                                    src="b3.png"
+                                    src={data.img3}
                                     alt=""
                                 />
                             </div>

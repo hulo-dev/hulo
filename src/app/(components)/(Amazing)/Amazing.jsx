@@ -33,7 +33,7 @@ const Amazing = async () => {
                             </p>
                         </div>
                         <div className="amazing__content-button">
-                            <Button link="#" name="GET" />
+                            <Button link="/contact" name="GET" />
                         </div>
                     </div>
 

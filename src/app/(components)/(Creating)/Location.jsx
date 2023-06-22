@@ -9,7 +9,11 @@ const Location = () => {
                     <span>LOCAL TIME 8:00 PM GMT (+3:00) Lviv, UA</span>
                 </div>
                 <div className="location-btn">
-                    <Link href="#" className="btn">
+                    <Link
+                        href="https://www.koloua.com/en"
+                        target="_blank"
+                        className="btn"
+                    >
                         <FlagIcon />
                         <span>
                             <DiagonalArrow />

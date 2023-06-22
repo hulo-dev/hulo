@@ -2,9 +2,13 @@ import Link from "next/link";
 import { DiagonalArrow, FlagIcon } from "../Icons";
 
 const FooterBtn = () => {
-    return(
+    return (
         <div className="footer__btn">
-            <Link href="#" className="btn">
+            <Link
+                href="https://www.koloua.com/en"
+                target="_blank"
+                className="btn"
+            >
                 <FlagIcon />
                 support Ukraine
                 <span>
@@ -14,6 +18,6 @@ const FooterBtn = () => {
             </Link>
         </div>
     );
-}
+};
 
 export default FooterBtn;

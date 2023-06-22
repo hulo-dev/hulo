@@ -7,7 +7,7 @@ const Work = ({ data }) => {
             <div className="container">
                 <div className="works__wrap">
                     <div className="work-name">
-                        <span className="name">More Works</span>
+                        <span className="name">More Projects</span>
                     </div>
                     <WorkList works={data} />
                 </div>

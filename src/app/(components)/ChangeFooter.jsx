@@ -5,7 +5,7 @@ import Footer from "./(Footer)/Footer";
 const ChangeFooter = () => {
     const pathname = usePathname();
     const footer =
-        pathname != "/Contact/" ? (
+        pathname != "/contact/" ? (
             <Footer copy={true} partners={true} btn={false} />
         ) : (
             <Footer

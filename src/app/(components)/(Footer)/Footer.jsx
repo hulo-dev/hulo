@@ -1,7 +1,7 @@
 import Partners from "../Partners";
 import Copyright from "./Copyright";
-import "./Footer.scss";
 import FooterBtn from "./FooterBtn";
+import "./Footer.scss";
 
 const Footer = ({ btn, copy, partners, class_name = "" }) => {
     return (

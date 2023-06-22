@@ -14,7 +14,7 @@ const FeaturedItem = ({ item }) => {
                         alt={item.title[0].text}
                         height={item.img.dimensions.height}
                     />
-                    <Link href={item.link.url}>
+                    <Link href={item.link.url} target="_blank">
                         <div className="btn">
                             View Project
                             <span className="span-svg-wrap">

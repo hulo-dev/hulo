@@ -10,15 +10,15 @@ const NAVIGATION__LINKS = [
         name: "about",
     },
     {
-        href: "/#featured",
+        href: "/#service",
         name: "services",
     },
     {
         href: "/#work",
-        name: "works",
+        name: "projects",
     },
     {
-        href: "/Contact",
+        href: "/contact",
         name: "Contact US",
     },
 ];

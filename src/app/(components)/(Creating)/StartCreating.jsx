@@ -14,7 +14,7 @@ const StartCreating = () => {
                         on budget.
                     </p>
                 </div>
-                <Button link="#" name="Start a Project" />
+                <Button link="/contact" name="Start a Project" />
             </div>
         </div>
     );

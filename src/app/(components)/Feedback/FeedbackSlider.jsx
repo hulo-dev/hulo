@@ -18,7 +18,7 @@ const FEEDBACK_CLIENT = [
         profession: "Founder of The Ghost Company",
         description:
             "My team and I love working with hulo! We’ve had the privilege of working  together on  both small and big projects and each time it is a great experience! Strong communication, top-quality work, and just a great team to work hand-in-hand with. You’ll be making a mistake if you DON’T reach out to hulo about your next Squarespace or Shopify project.",
-        src_img: "f1.png",
+        src_img: "f2.jpg",
     },
     {
         name: "Kate Bosse",
@@ -32,14 +32,14 @@ const FEEDBACK_CLIENT = [
         profession: "director at Detraform",
         description:
             "Working with hulo.dev has been to a crucial part of building my design practice and allowing me to offer my clients agency level websites.  Their custom coding skills for Squarespace are the best in the industry.",
-        src_img: "f1.png",
+        src_img: "f3.png",
     },
     {
         name: "Suzie Consoli",
         profession: "Founder of Lawson House",
         description:
             "I can’t recommend hulo enough. They are so wonderful to work with. Pavlo is never overwhelmed by my crazy requests and gives helpful guidance on improving the UX experience for our clients. Their communication is outstanding, and they consistently overdeliver. I am so grateful to have found hulo!",
-        src_img: "f1.png",
+        src_img: "f4.png",
     },
 ];
 

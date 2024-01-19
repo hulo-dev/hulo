@@ -389,3 +389,19 @@ export const DiagonalArrowSmall = () => {
         </svg>
     );
 };
+
+export const ArrowDown = () => {
+    return (
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_5938_1099)">
+            <path d="M12 6L6.34315 11.6569M6.34315 11.6569L0.686292 6M6.34315 11.6569L6.34315 0.343145" stroke="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_5938_1099">
+            <rect width="13" height="13" fill="white" transform="translate(13 13) rotate(-180)"/>
+            </clipPath>
+            </defs>
+        </svg>
+
+    )
+}

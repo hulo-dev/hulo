@@ -1,22 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
 import "./GridImages.scss";
 import Image from "next/image";
 
-
-
 export const GridImages = ({ data }) => {
-  // const [newArray, setNewArray] = useState(array);
-  // useEffect(() => {
-  //   const tempArray = [];
-  //   for (let i = 0; i < array.length; i++) {
-  //       i !== 0 && i + 1 < array.length
-  //           ? (tempArray.push([array[i], array[i + 1]]), i++)
-  //           : tempArray.push([array[i]]);
-  //   }
-  //   setNewArray(tempArray);
-  //   console.log(newArray);
-  // }, [array]);
 
   return (
     <div className="container">
@@ -42,15 +28,6 @@ export const GridImages = ({ data }) => {
           <Image src={data.img5.url} width={500} height={500} alt="" />
         </div>
       </div>
-      {/* {newArray.map((group, i) => (
-        <div key={i} className="grid-image-group">
-          {group.map((src, j) => (
-            <div key={j} className="grid-image">
-              <Image src={src} width={500} height={500} alt="" />
-            </div>
-          ))}
-        </div>
-      ))} */}
     </div>
   </div>
   );

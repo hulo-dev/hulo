@@ -8,7 +8,9 @@ const SectionImage = ({ data, heightImg }) => {
         <div className="section-image">
             <div className="container">
                 <div className="section-image__wrap">
-                    <Image  src={data} width={500} height={500} alt="" style={{maxHeight: heightImg + 'px'}}/>
+                    <div className="img_body" style={{paddingTop: heightImg + '%'}}>
+                        <Image  src={data} width={500} height={500} alt="" />
+                    </div>
                 </div>
             </div>
         </div>

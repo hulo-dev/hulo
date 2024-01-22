@@ -31,14 +31,14 @@ export async function generateStaticParams() {
   const client = createClient();
   const pages = await client.getAllByType("project_item");
   return pages.map((page) => {
-    return { uid: page.uid };
+    return { handle: page.uid };
   });
 }
 
 export async function getStaticPaths() {
   const client = createClient("hulo2")
 
-  const pages = await client.getAllByType('project_item')
+  const pages = await client.getAllByType('project_item');
   return {
     paths: pages.map((page) => prismic.asLink(page)),
     fallback: true,

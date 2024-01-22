@@ -26,7 +26,13 @@ export default async function ProjectItems({ params = null}) {
       </div>
     );
   } catch (error) {
-    console.log(error);
+    return (
+      <div>
+        <h1>
+          Is not page
+        </h1>
+      </div>
+    )
   }
  
 }

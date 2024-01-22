@@ -9,7 +9,7 @@ const HeaderBanner = ({ data }) => {
                 <div className="header-banner__wrap">
                     <div className="title">
                         <h1>
-                            { data.title[0].text }
+                            { data?.title[0].text }
                         </h1>
                         <div className="scroll-down">
                             <Link href='#' >
@@ -22,10 +22,10 @@ const HeaderBanner = ({ data }) => {
                     </div>
                     <div className="content">
                         <div className="tags">
-                            { data.tags.map((tag, key)=> (<div className="tag" key={key}> <span > {tag.text} </span> </div>)) }
+                            { data?.tags.map((tag, key)=> (<div className="tag" key={key}> <span > {tag.text} </span> </div>)) }
                         </div>
                         <div className="header-btn">
-                            <Link href={data.link_project.url} >
+                            <Link href={data?.link_project.url} >
                                     <div className="btn">
                                             visit website
                                         <span className="span-svg-wrap">

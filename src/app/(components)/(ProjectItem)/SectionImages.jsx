@@ -6,7 +6,7 @@ const SectionImages = ({ data }) => {
     return (
         <div>
             <SectionText data={data} maxWidth={862} aligment="right"/>
-            <Images images={[data.image.url, data.images1.url]}/>
+            <Images images={[data?.image.url, data?.images1.url]}/>
         </div>
     )
 }

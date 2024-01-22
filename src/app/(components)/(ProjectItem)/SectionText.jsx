@@ -8,7 +8,7 @@ const SectionText = ({ data, maxWidth, aligment }) => {
             <div className="container">
                 <div className={`title ${aligment}`}  style={{maxWidth:maxWidth + 'px'}}>
                     <h3>
-                        {data.title[0].text}
+                        {data?.title[0].text}
                     </h3>
                 </div>
             </div>

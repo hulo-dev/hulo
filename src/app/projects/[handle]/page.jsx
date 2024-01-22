@@ -20,7 +20,7 @@ export default async function ProjectItems({ params = null}) {
  
   return (
     <div>
-      <ProjectItem data={project_item.data} /> 
+      <ProjectItem data={project_item?.data} /> 
       <Feedback />
       <Featured data={featured} /> 
     </div>

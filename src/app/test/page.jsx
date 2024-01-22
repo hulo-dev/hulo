@@ -9,7 +9,7 @@ export default async function ProjectItems({ params = null }) {
   const project_handle = params.handle;
   const projects = await client.getByType("project");
 
-  const project_item = await client.getByUID("project_item", project_handle);
+  const project_item = await client.getByUID("project_item", 'knife');
   const featured = projects.results.filter((e) =>
     e.tags.some((tag) => tag == "featured")
   );

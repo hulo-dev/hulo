@@ -6,10 +6,10 @@ import { createClient } from "@prismicio/client";
 
 const client = createClient("hulo2");
 export default async function ProjectItems({ params = null }) {
-  const project_handle = params.handle;
+  const project_handle = 'knife';
   const projects = await client.getByType("project");
 
-  const project_item = await client.getByUID("project_item", 'knife');
+  const project_item = await client.getByUID("project_item", project_handle);
   const featured = projects.results.filter((e) =>
     e.tags.some((tag) => tag == "featured")
   );

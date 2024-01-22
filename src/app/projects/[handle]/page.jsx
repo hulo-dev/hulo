@@ -7,10 +7,10 @@ import { notFound } from "next/navigation";
 
 
 export default async function ProjectItems({ params }) {
+
   const client = createClient("hulo2");
   const project_handle = params.handle;
   const projects = await client.getByType("project");
-
   const project_item = await client
     .getByUID("project_item", project_handle)
     .catch(() => notFound);
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 
   const pages = await client.getAllByType('project_item');
   return {
-    paths: pages.map((page) => prismic.asLink(page)),
+    paths: pages.map((page) => { return { params: { handle: page.uid } } }),
     fallback: true,
   }
 }

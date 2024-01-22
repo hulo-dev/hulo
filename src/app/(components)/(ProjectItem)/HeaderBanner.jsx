@@ -25,7 +25,7 @@ const HeaderBanner = ({ data }) => {
                             { data?.tags.map((tag, key)=> (<div className="tag" key={key}> <span > {tag.text} </span> </div>)) }
                         </div>
                         <div className="header-btn">
-                            <Link href={data?.link_project.url} >
+                            <Link href={data?.link_project.url ?? ''} >
                                     <div className="btn">
                                             visit website
                                         <span className="span-svg-wrap">

@@ -20,9 +20,19 @@ export default async function ProjectItems({ params }) {
 
   return (
     <div>
-      { !!project_item?.data ? <ProjectItem data={project_item?.data} /> : null}
+      <ProjectItem data={project_item?.data} />
       <Feedback />
       <Featured data={featured} />
     </div>
   );
+}
+
+
+
+export async function generateStaticParams() {
+  const client = createClient("hulo2");
+  const pages = await client.getAllByType("page");
+  return pages.map((page) => {
+    return { uid: page.uid };
+  });
 }

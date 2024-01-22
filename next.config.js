@@ -2,6 +2,14 @@
 const path = require('path');
 
 const nextConfig = {
+    async rewrites() {
+      return [
+        {
+          source: '/hulo/projects/:path*',
+          destination: '/hulo/projects/:path*',
+        },
+      ];
+    },
     trailingSlash: true,
     sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],

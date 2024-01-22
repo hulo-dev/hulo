@@ -8,22 +8,26 @@ import { createClient } from "@prismicio/client";
 
 const client = createClient("hulo2");
 export default async function ProjectItems({ params = null}) {
-
-  const project_handle = params.handle;
-  const projects = await client.getByType("project");
-
-  const project_item = await client.getByUID('project_item', project_handle);
-  const featured = projects.results.filter((e) =>
-    e.tags.some((tag) => tag == "featured")
-  );
-
+  try {
+    const project_handle = params.handle;
+    const projects = await client.getByType("project");
+  
+    const project_item = await client.getByUID('project_item', project_handle);
+    const featured = projects.results.filter((e) =>
+      e.tags.some((tag) => tag == "featured")
+    );
+  
+   
+    return (
+      <div>
+        <ProjectItem data={project_item.data} /> 
+        <Feedback />
+        <Featured data={featured} /> 
+      </div>
+    );
+  } catch (error) {
+    console.log(error);
+  }
  
-  return (
-    <div>
-      <ProjectItem data={project_item.data} /> 
-      <Feedback />
-      <Featured data={featured} /> 
-    </div>
-  );
 }
 

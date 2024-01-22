@@ -4,7 +4,7 @@ import ProjectItem from "@/app/(components)/(ProjectItem)/ProjectItem";
 import Feedback from "@/app/(components)/Feedback/Feedback";
 import { createClient } from "@prismicio/client";
 import { notFound } from "next/navigation";
-
+import * as prismic from '@prismicio/client'
 
 export default async function ProjectItems({ params }) {
 
@@ -17,7 +17,8 @@ export default async function ProjectItems({ params }) {
   const featured = projects.results.filter((e) =>
     e.tags.some((tag) => tag == "featured")
   );
-
+  const pages = await client.getAllByType('project_item');
+  console.log(pages.map((page) => prismic.asLink(page)));
   return (
     <div>
       <ProjectItem data={project_item?.data} />
@@ -40,7 +41,7 @@ export async function getStaticPaths() {
 
   const pages = await client.getAllByType('project_item');
   return {
-    paths: pages.map((page) => { return { params: { handle: page.uid } } }),
+    paths: pages.map((page) => prismic.asLink(page)),
     fallback: true,
   }
 }

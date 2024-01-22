@@ -7,9 +7,9 @@ import { createClient } from "@prismicio/client";
 
 
 const client = createClient("hulo2");
-export default async function ProjectItems({ params }) {
+export default async function ProjectItems({ params = null}) {
 
-  const project_handle = params.handle || null;
+  const project_handle = params.handle;
   const projects = await client.getByType("project");
 
   const project_item = await client.getByUID('project_item', project_handle);

@@ -29,10 +29,13 @@ export default async function ProjectItems({ params }) {
 
 
 
-export async function generateStaticParams() {
-  const client = createClient("hulo2");
-  const pages = await client.getAllByType("page");
-  return pages.map((page) => {
-    return { uid: page.uid };
-  });
+export async function getStaticPaths() {
+  const client = createClient("hulo2")
+
+  const pages = await client.getAllByType('page')
+
+  return {
+    paths: pages.map((page) => prismic.asLink(page)),
+    fallback: true,
+  }
 }

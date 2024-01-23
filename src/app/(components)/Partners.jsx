@@ -1,4 +1,7 @@
 import Image from "next/image";
+import shopifyPartner from "/public/shopify-partners-dark.png"
+import circle from "/public/circle-dark.png"
+import shopifyPlus from "/public/shopify-plus-dark.png"
 
 const Partners = ({ class_name }) => {
     return (
@@ -12,7 +15,7 @@ const Partners = ({ class_name }) => {
                     className="img-dark"
                     width={177}
                     height={28}
-                    src="shopify-partners-dark.png"
+                    src={shopifyPartner}
                     alt="1"
                 />
             </a>
@@ -25,7 +28,7 @@ const Partners = ({ class_name }) => {
                     className="img-dark"
                     width={159}
                     height={28}
-                    src="circle-dark.png"
+                    src={circle}
                     alt="2"
                 />
             </a>
@@ -38,7 +41,7 @@ const Partners = ({ class_name }) => {
                     className="img-dark"
                     width={109}
                     height={28}
-                    src="shopify-plus-dark.png"
+                    src={shopifyPlus}
                     alt="3"
                 />
             </a>

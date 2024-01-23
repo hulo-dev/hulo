@@ -41,7 +41,9 @@ export async function getStaticPaths() {
 
   const pages = await client.getAllByType('project_item');
   return {
-    paths: [pages.map((page) => prismic.asLink(page))],
+    paths: pages.map((page) => {
+      return {params : {handle: page.uid}};
+    }),
     fallback: true,
   }
 }

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Providers } from './providers';
 import ChangeFooter from './(components)/ChangeFooter';
 import Header from './(components)/Header/Header'
+import Script from 'next/script';
 
 // export const metadata = {
 //   title: 'Hulo Dev Next js',
@@ -19,6 +20,17 @@ export default function RootLayout({ children }) {
 
   return (
     <html suppressHydrationWarning lang="en" className='scroll-smooth'>
+      <head>
+        <Script id="microsoft-clarity-analytics" strategy="beforeInteractive">
+          {`            
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "pxbxayxiit");
+          `}
+        </Script>
+      </head>
       <body className={isLock ? 'lock' : ''}>
         <div className='overlay'/>
         <Providers>

@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
             })(window, document, "clarity", "script", "pxbxayxiit");
           `}
         </Script>
-        {/* <Script id="microsoft-clarity-analytics" strategy="beforeInteractive">
+        <Script id="microsoft-clarity-analytics" strategy="beforeInteractive">
           {`            
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -38,17 +38,7 @@ export default function RootLayout({ children }) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-NTPFKWDZ');
           `}
-        </Script> */}
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-LG9TBV688X" strategy="afterInteractive"></Script>
-      <Script strategy="beforeInteractive">
-        {`            
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-LG9TBV688X');
-        `}
-      </Script>
+        </Script>
       </head>
       <body className={isLock ? 'lock' : ''}>
         <div className='overlay'/>

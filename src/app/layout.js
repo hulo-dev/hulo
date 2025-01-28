@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
           `}
         </Script> */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-LG9TBV688X"></Script>
-      <Script strategy="beforeInteractive">
+      <Script>
         {`            
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

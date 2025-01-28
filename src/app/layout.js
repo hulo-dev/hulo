@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-NTPFKWDZ');
           `}
         </Script> */}
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-LG9TBV688X" strategy="beforeInteractive"></Script>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-LG9TBV688X"></Script>
       <Script strategy="beforeInteractive">
         {`            
           window.dataLayer = window.dataLayer || [];
